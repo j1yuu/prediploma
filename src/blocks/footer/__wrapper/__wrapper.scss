@@ -1,0 +1,15 @@
+.footer__wrapper {
+    display: flex;
+    // justify-content: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 12.6rem;
+}
+
+@media (max-width: 48em) {
+    .footer__wrapper {
+        height: auto;
+        flex-wrap: nowrap;
+        width: 79.375vw;
+    }
+}

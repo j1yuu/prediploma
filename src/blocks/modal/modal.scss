@@ -1,0 +1,18 @@
+.modal {
+    position      : fixed;
+    inset         : 0;
+    height        : 100%;
+    width         : 100%;
+    overflow-x    : hidden;
+    overflow-y    : auto;
+    padding-top   : 10%;
+    padding-bottom: 3rem;
+    z-index       : 200;
+    display       : none;
+}
+
+@media (max-width: 48em) {
+    .modal {
+        padding-top: 30%;
+    }
+}

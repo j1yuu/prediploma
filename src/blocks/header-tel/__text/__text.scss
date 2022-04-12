@@ -1,0 +1,12 @@
+.header-tel__text {
+  @include font(500, 1.9rem, 140%);
+  color: $color-text-black;
+}
+
+@media (max-width: 48em) {
+  .header-tel__text {
+    color          : #0074D4;
+    font-size      : 3.29411765rem;
+    text-decoration: underline;
+  }
+}

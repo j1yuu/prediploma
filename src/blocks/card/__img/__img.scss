@@ -1,0 +1,13 @@
+.card__img {
+    width        : 27.8rem;
+    height       : 32.9rem;
+    margin-bottom: 5.5rem;
+}
+
+@media (max-width: 48em) {
+    .card__img {
+        width: 43.4375vw;
+        height: 51.4063vw;
+        margin-bottom: 3.359375vw;
+    }
+}

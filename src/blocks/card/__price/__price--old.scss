@@ -1,0 +1,11 @@
+.card__price--old {
+    position: relative;
+    @include font(700, 2rem, 140%);
+    letter-spacing: -0.05em;
+}
+
+@media (max-width: 48em) {
+    .card__price--old {
+        font-size: 4rem;
+    }
+}

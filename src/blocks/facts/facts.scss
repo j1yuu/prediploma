@@ -1,0 +1,22 @@
+.facts {
+    .title {
+        padding-bottom: 2.5rem;
+    }
+
+    .container {
+        padding-top: 10.8rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .facts {
+        .container {
+            padding-top: 15.3125vw;
+            padding-bottom: 0;
+        }
+
+        .title {
+            padding-bottom: 4.6875vw;
+        }
+    }
+}

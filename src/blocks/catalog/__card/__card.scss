@@ -1,0 +1,18 @@
+.catalog__card {
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+@media (max-width: 48em) {
+
+    .catalog__card:last-child,
+    .catalog__card:nth-child(5) {
+        display: none !important;
+    }
+
+    .catalog__card {
+        display        : flex;
+        justify-content: center;
+        margin-bottom: 5.125vw;
+    }
+}

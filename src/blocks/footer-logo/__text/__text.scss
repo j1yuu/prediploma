@@ -1,0 +1,15 @@
+.footer-logo__text {
+    @include font(400, 1rem, 150%);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #959AAE;
+    width: fit-content;
+}
+
+@media (max-width: 48em) {
+    .footer-logo__text {
+        font-size: 3.125vw;
+        margin-left: -1.5rem;
+        margin-top: -0.5rem;
+    }
+}

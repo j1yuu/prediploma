@@ -1,0 +1,16 @@
+.pros__img {
+    width        : 8.8rem;
+    height       : 8.8rem;
+    margin-bottom: 1.8rem;
+}
+
+@media (max-width: 48em) {
+    .pros__img {
+        width        : 11.24rem;
+        height       : 11.24rem;
+        margin-bottom: auto;
+        margin-right : 1.8rem;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+    }
+}

@@ -1,0 +1,12 @@
+.catalog__wrap {
+    display      : grid;
+    grid-template: 1fr 1fr / repeat(4, 1fr);
+    gap          : 1.6rem;
+}
+
+@media (max-width: 48em) {
+    .catalog__wrap {
+        grid-template: repeat(3, 1fr) / 1fr 1fr;
+        gap          : 2.342rem;
+    }
+}

@@ -1,0 +1,11 @@
+.header__catalog {
+  display     : flex;
+  align-items : center;
+  margin-right: 4.25rem;
+}
+
+@media (max-width: 48em) {
+  .header__catalog {
+    display: none;
+  }
+}

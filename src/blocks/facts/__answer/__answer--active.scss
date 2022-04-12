@@ -1,0 +1,18 @@
+.facts__answer--active {
+    height: 8.1rem;
+    padding-bottom: 10.5rem;
+    padding-right: 6.7rem;
+    margin-top: -.3rem;
+    margin-left: -0.2rem;
+}
+
+@media (max-width:  48em) {
+    .facts__answer--active {
+        box-sizing: content-box;
+        height: 31vw;
+        padding-bottom: 1.5625vw !important;
+        padding-right: 0 !important;
+        margin-top: 1rem !important;
+        line-height: 122% !important;
+    }
+}

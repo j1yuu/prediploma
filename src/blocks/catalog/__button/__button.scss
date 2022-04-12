@@ -1,0 +1,12 @@
+.catalog__button {
+    padding   : 2.4rem 3rem 2.6rem;
+    text-align: center;
+    width     : 100%;
+}
+
+@media (max-width: 48em) {
+    .catalog__button {
+        padding-top   : 3.76rem;
+        padding-bottom: 4rem;
+    }
+}

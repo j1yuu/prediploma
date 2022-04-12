@@ -1,0 +1,15 @@
+.form__item {
+    &:first-child {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .form__item {
+        width: 77.8125vw;
+
+        &:first-child {
+            margin-bottom: 3.294117647rem;
+        }
+    }
+}

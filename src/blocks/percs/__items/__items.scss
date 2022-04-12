@@ -1,0 +1,19 @@
+.percs__items {
+    height: 50.8rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+@media (max-width: 48em) {
+    .percs__items {
+        margin-left: -4.0625vw;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100vw;
+        overflow: hidden;
+        height: auto;
+    }
+}

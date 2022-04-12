@@ -1,0 +1,21 @@
+.footer-nav__item {
+    font-family: 'Manrope';
+    @include font (500, 1.7rem, 140%);
+    color: #E7EAEF;
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+        // @include disflex;
+    }
+
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+@media (max-width: 48em) {
+    .footer-nav__item {
+        font-size: 4.6875vw;
+        margin-bottom: 2.35295rem !important;
+    }
+}

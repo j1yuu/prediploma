@@ -1,0 +1,15 @@
+.percs__description {
+    text-align: center;
+    @include font(400, 2.3rem, 160%);
+    color: #576077;
+    
+    strong {
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 48em) {
+    .percs__description {
+        font-size: 4.375vw;
+    }
+}

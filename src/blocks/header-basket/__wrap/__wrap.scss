@@ -1,0 +1,10 @@
+.header-basket__wrap {
+  @include disflex;
+  flex-shrink: 0;
+}
+
+@media (max-width: 48em) {
+  .header-basket__wrap {
+    position: relative;
+  }
+}

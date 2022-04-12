@@ -1,0 +1,16 @@
+.footer-conf {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    @include font (500, 1.4rem, 140%);
+    color: #959AAE;
+    width: fit-content;
+    height: fit-content;
+}
+
+@media (max-width: 48em) {
+    .footer-conf {
+        order: 11;
+        font-size: 4.0625vw;
+    }
+}

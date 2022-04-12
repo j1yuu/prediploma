@@ -1,0 +1,10 @@
+.header-tel__wrap {
+  @include disflex;
+  margin-left: -2rem;
+}
+
+@media (max-width: 48em) {
+  .header-tel {
+    display: none;
+  }
+}

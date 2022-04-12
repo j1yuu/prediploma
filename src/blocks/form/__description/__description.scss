@@ -1,0 +1,14 @@
+.form__description {
+    @include font(300, 2.6rem, 150%);
+    color: #FFFFFF;
+    margin-bottom: 2.9rem;
+    padding-left: 0.3rem;
+}
+
+@media (max-width: 48em) {
+    .form__description {
+        padding-left: 0;
+        font-size: 4.6875vw;
+        margin-bottom: 4.6875vw;
+    }
+}

@@ -1,0 +1,13 @@
+.footer {
+    padding-top: 6.3rem;
+    padding-bottom: 6.5rem;
+    background-color: #191E32;
+}
+
+@media (max-width: 48em) {
+    .footer {
+        display: block;
+        padding-top: 12.8125vw;
+        padding-bottom: 11.875vw;
+    }
+}

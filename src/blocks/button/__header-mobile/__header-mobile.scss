@@ -1,0 +1,7 @@
+.button__header-mobile {
+    @include font(500, 3.76471rem, 140%);
+    padding      : 3.17647rem 6.70588235rem 3.6471rem;
+    font-family  : 'Inter', sans-serif;
+    border-radius: 1.882353rem;
+    margin-bottom: 2.353rem;
+}

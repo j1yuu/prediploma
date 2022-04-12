@@ -1,0 +1,14 @@
+.pros {
+    .container {
+        max-width: 114rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .pros {
+        .container {
+            max-width: 100%;
+            padding  : 0 3.4rem;
+        }
+    }
+}

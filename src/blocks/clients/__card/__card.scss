@@ -1,0 +1,78 @@
+.rzhd {
+    width : 10.4rem;
+    height: 5rem;
+}
+
+.nni {
+    width : 14.5rem;
+    height: 3.3rem;
+}
+
+.bn {
+    width : 14.7rem;
+    height: 3.6rem;
+}
+
+.rk {
+    width : 15.1rem;
+    height: 3rem;
+}
+
+.hc {
+    width : 10rem;
+    height: 4.8rem;
+}
+
+.win {
+    width : 13.2rem;
+    height: 2.2rem;
+}
+
+@media (max-width: 48em) {
+
+    .clients__card {
+        margin: auto;
+    }
+
+    .rzhd {
+        width : 18.3529rem;
+        height: 8.7059rem;
+        order : 0;
+        margin-top: -0.2rem;
+        margin-left: 7rem;
+    }
+
+    .nni {
+        width : 28.9412rem;
+        height: 8.7059rem;
+        order : 4;
+        margin-bottom: -1rem;
+    }
+
+    .bn {
+        width : 28.0588rem;
+        height: 7.1176rem;
+        order : 2;
+        margin-left: 5rem;  
+    }
+
+    .rk {
+        width : 31.7647rem;
+        height: 6.35294118rem;
+        order : 3;
+    }
+
+    .hc {
+        width : 18.1764706rem;
+        height: 9rem;
+        order : 1;
+        margin-top: 0;
+    }
+
+    .win {
+        width : 28.2352941rem;
+        height: 4.70588235rem;
+        order : 5;
+        margin-top: 4.5rem;
+    }
+}

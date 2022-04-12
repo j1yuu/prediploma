@@ -1,0 +1,12 @@
+.card__price--new {
+    @include font(900, 2.8rem, 140%);
+    letter-spacing: -0.05em;
+    margin-bottom : 0.4rem;
+}
+
+@media (max-width: 48em) {
+    .card__price--new {
+        font-size: 6.25vw;
+        margin-bottom: 0;
+    }
+}

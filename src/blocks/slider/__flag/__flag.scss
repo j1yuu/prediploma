@@ -1,0 +1,15 @@
+.slider__flag {
+    width   : 5.4rem;
+    height  : 6.5rem;
+    position: absolute;
+    bottom  : -.3rem;
+    right   : 18.5rem;
+}
+
+@media (max-width: 48em) {
+    .slider__flag {
+        width : 4.2353rem;
+        height: 5.1765rem;
+        right: 14.5rem;
+    }
+}

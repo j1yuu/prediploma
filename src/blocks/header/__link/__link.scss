@@ -1,0 +1,12 @@
+.header__link {
+  @include font(500, 1.6rem, 140%);
+  font-family: 'Inter', sans-serif;
+}
+
+.header__link:not(:last-child) {
+  margin-right: 3.4rem;
+}
+
+.header__link:nth-child(3) {
+  margin-left: -0.5rem;
+}

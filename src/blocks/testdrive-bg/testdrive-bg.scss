@@ -1,0 +1,22 @@
+.testdrive-bg {
+    position: absolute;
+    z-index : -1;
+    width   : 180rem;
+    height  : 51.3rem;
+
+    img {
+        object-fit   : cover;
+        border-radius: 1.6rem;
+    }
+
+    bottom   : 0;
+    left     : 50%;
+    transform: translate(-50%, 0);
+}
+
+@media (max-width: 48em) {
+    .testdrive-bg {
+        width : 100%;
+        height: 28rem;
+    }
+}

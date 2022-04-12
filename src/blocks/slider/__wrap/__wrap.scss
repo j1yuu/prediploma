@@ -1,0 +1,11 @@
+.slider {
+    &__wrap {
+        max-width: 64rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .slider__wrap {
+        max-width: 49.64705882352941rem;
+    }
+}

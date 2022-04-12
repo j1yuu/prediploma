@@ -1,0 +1,16 @@
+.slider__navigation {
+    position       : absolute;
+    width          : 180.8rem;
+    display        : flex;
+    justify-content: space-between;
+    left           : 50%;
+    top            : 50%;
+    transform      : translate(-50%, -50%);
+    z-index        : 100;
+}
+
+@media (max-width: 48em) {
+    .slider__navigation {
+        display: none;
+    }
+}

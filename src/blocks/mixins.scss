@@ -1,0 +1,10 @@
+@mixin font($weight, $size, $height) {
+    font-weight: $weight;
+    font-size  : $size;
+    line-height: $height;
+}
+
+@mixin disflex {
+    display    : flex;
+    align-items: center;
+}

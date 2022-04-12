@@ -1,0 +1,10 @@
+.percs__lower {
+    position: relative;
+}
+
+@media (max-width: 48em) {
+    .percs__lower {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

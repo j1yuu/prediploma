@@ -1,0 +1,48 @@
+.form__text {
+    @include font(300, 1.8rem, 122%);
+    color: #576077;
+
+    display: flex;
+    align-items: center;
+
+    &:before {
+        content: '';
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: .5rem;
+        background: #576077;
+        border: .1rem solid #6F7487;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+
+    span {
+        margin-left: 1.8rem;
+    }
+
+    padding-left: .5rem;
+}
+
+@media (max-width: 48em) {
+    .form__text {
+        // width: 62.8125vw;
+        margin-top: -.5rem;
+
+        &:before {
+            border-width: 0.3125vw;
+            width: 6.25vw;
+            height: 6.25vw;
+            background-size: 4vw;
+            border-radius: 1.5625vw;
+            margin-left: .5rem;
+        }
+
+        span {
+            text-align: left;
+            font-size: 3.75vw;
+            line-height: 91.52%;
+            width: 60vw;
+        }
+    }
+}

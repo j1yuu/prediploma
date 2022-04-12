@@ -1,0 +1,41 @@
+.form__wrapper {
+    position: relative;
+    z-index: 1;
+    width: 180rem;
+    margin: 0 auto;
+    background: no-repeat center/cover url('../img/form/BG.jpg');
+    box-shadow: 0 3.6rem 8.4rem -2.4rem rgba(43, 51, 80, 0.5);
+    border-radius: 1.6rem;
+    padding-top: 13rem;
+    padding-bottom: 10.4rem;
+
+        .form__header,
+        .form__description {
+            max-width: 59rem;
+        }
+
+        .container {
+            width: 118.1rem;    
+        }
+}
+
+@media (max-width: 48em) {
+    .form__wrapper {
+        width: 100%;
+        padding-top: 20.9375vw;
+        padding-bottom: 17.8125vw;
+        border-radius: 0;
+
+        .container {
+            width: 86.875vw;
+            padding: 0;
+        }
+
+        text-align: center;
+
+        .form__header,
+        .form__description {
+            max-width: 100%;
+        }
+    }
+}

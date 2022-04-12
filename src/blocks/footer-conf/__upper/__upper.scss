@@ -1,0 +1,9 @@
+.footer-conf__upper {
+    margin-bottom: .6rem;
+}
+
+@media (max-width: 48em) {
+    .footer-conf__upper {
+        margin-bottom: 1.875vw;
+    }
+}

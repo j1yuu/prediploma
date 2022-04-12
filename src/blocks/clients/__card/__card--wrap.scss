@@ -1,0 +1,17 @@
+.clients__card--wrap {
+    width          : 111rem;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    margin         : 4.3rem auto 0;
+}
+
+@media (max-width: 48em) {
+    .clients__card--wrap {
+        margin-top   : 7.05882353rem;
+        width        : 97.125vw;
+        height       : 35.5294rem;
+        display      : grid;
+        grid-template: repeat(3, 1fr) / 1fr 1fr;
+    }
+}

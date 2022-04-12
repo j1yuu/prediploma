@@ -1,0 +1,15 @@
+.header-basket__count--size {
+  color        : #FFFFFF;
+  padding      : 0.2rem .6rem;
+  background   : #0074D4;
+  border-radius: 2.7rem;
+}
+
+@media (max-width: 48em) {
+  .header-basket__count--size {
+    padding : 0 0.9368rem;
+    position: absolute;
+    right   : -5%;
+    top     : -4%;
+  }
+}

@@ -1,0 +1,11 @@
+.footer-logo__img {
+    width: 18.4rem;
+    height: 2.9rem;
+}
+
+@media (max-width: 48em) {
+    .footer-logo__img {
+        width: 57.5vw;
+        height: 9.0625vw;
+    }
+}

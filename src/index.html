@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/swiper-bundle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script defer src="script/inputmask.min.js"></script>
+    <script defer src="script/aos.js"></script>
+    <script defer src="script/swiper-bundle.js"></script>
+    <script defer src="script/script.js"></script>
+    <title>ОфисДирект</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrap">
+                <div class="header__info">
+                    <div class="header__burger">
+                        <img loading="lazy" src="img/header/burger-mobile.svg" alt="">
+                    </div>
+                    <div class="header__cross">
+                        <img loading="lazy" src="img/header/cross.svg" alt="">
+                    </div>
+                    <a href="#" class="header-logo header-logo__wrap">
+                        <div class="header-logo__img">
+                            <img loading="lazy" src="img/header/logo.svg" alt="">
+                        </div>
+                        <div class="header-logo__text header-logo__text--color">
+                            Кресла Samurai
+                        </div>
+                    </a>
+                    <div class="header__find">
+                        <input type="text" class="header__input header__input--color"
+                            placeholder="Название модели или артикул">
+                    </div>
+                    <div class="header-tel header-tel__wrap">
+                        <div class="header-tel__img">
+                            <img loading="lazy" src="img/header/phone.svg" alt="">
+                        </div>
+                        <a href="tel:+74952210675" class="header-tel__text">+7 495 221-06-75</a>
+                    </div>
+                    <button type="button" class="button button__header button__header--color button__modal">
+                        Заказать звонок
+                    </button>
+                </div>
+
+                <div class="header__menu">
+                    <div class="header__navigation">
+                        <button class="header__catalog header__catalog--color header__catalog--size-m">
+                            <img loading="lazy" src="img/header/burger.svg" alt="" class="menu__img">
+                            <span>Каталог</span>
+                        </button>
+                        <nav class="header__nav">
+                            <a href="#" class="header__link">О продукте</a>
+                            <a href="#" class="header__link">Отзывы</a>
+                            <a href="#" class="header__link">Доставка и оплата</a>
+                            <a href="#" class="header__link">Контакты</a>
+                        </nav>
+                    </div>
+                    <div class="header__shop">
+                        <div class="header__region">
+                            <div class="header__gps">
+                                <img loading="lazy" src="img/header/geoposition.svg" alt="">
+                            </div>
+
+                            <div class="select">
+                                <div class="select__categories">
+                                    <div class="select__header">
+                                        <span class="select__title">Москва</span>
+                                        <img loading="lazy" src="img/header/arrow-down.svg" alt="">
+                                    </div>
+                                    <ul class="select__body">
+                                        <li class="select__item">Новосибисрк</li>
+                                        <li class="select__item">Псков</li>
+                                        <li class="select__item">Омск</li>
+                                        <li class="select__item">Санкт-Петербург</li>
+                                        <li class="select__item">Москва</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-basket header-basket__wrap">
+                            <div class="header-basket__img">
+                                <img loading="lazy" src="img/header/shopping-cart.svg" alt="">
+                            </div>
+                            <span class="header-basket__text">Моя корзина</span>
+                            <div class="header-basket__count header-basket__count--size">+1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__mobile">
+                <ul class="header__list">
+                    <li class="header__item header__item--color">
+                        <a href="#">О продукте</a>
+                    </li>
+                    <li class="header__item header__item--color">
+                        <a href="#">Отзывы</a>
+                    </li>
+                    <li class="header__item header__item--color">
+                        <a href="#">Доставка и оплата</a>
+                    </li>
+                    <li class="header__item header__item--color">
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+                <button type="button" class="button button__header-mobile button__header--color button__modal">
+                    Заказать звонок
+                </button>
+                <a href="tel:+74952210675" class="header-tel__text">+7 495 221-06-75</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="slider swiper">
+            <div class="swiper-wrapper">
+                <div class="slider__slide swiper-slide">
+                    <div class="container">
+                        <div class="slider__wrap">
+                            <div class="slider__title">
+                                <h1 class="slider__header">Кресла Samurai
+                                    <strong>на выгодных условиях</strong>
+                                    по всей стране
+                                </h1>
+                                <div class="slider__flag">
+                                    <img src="img/slider/flag.png" alt="">
+                                </div>
+                            </div>
+                            <div class="slider__description">Здесь вам не придется покупать товар в слепую — проведите
+                                тест-драйв перед покупкой</div>
+                            <button type="button" class="button button__slider button__modal"><span
+                                    class="button__slider--first">Запись на т</span><span
+                                    class="t__uppercase">Т</span>ест-драйв</button>
+                        </div>
+                    </div>
+                    <div class="slider__back">
+                        <img src="img/slider/bg.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slider__slide swiper-slide">
+                    <div class="container">
+                        <div class="slider__wrap">
+                            <div class="slider__title">
+                                <h1 class="slider__header">Кресла Samurai
+                                    <strong>на выгодных условиях</strong>
+                                    по всей стране
+                                </h1>
+                                <div class="slider__flag">
+                                    <img src="img/slider/flag.png" alt="">
+                                </div>
+                            </div>
+                            <div class="slider__description">Здесь вам не придется покупать товар в слепую — проведите
+                                тест-драйв перед покупкой</div>
+                            <button type="button" class="button button__slider button__modal"><span
+                                    class="button__slider--first">Запись на т</span><span
+                                    class="t__uppercase">Т</span>ест-драйв</button>
+                        </div>
+                    </div>
+                    <div class="slider__back">
+                        <img src="img/slider/bg.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slider__slide swiper-slide">
+                    <div class="container">
+                        <div class="slider__wrap">
+                            <div class="slider__title">
+                                <h1 class="slider__header">Кресла Samurai
+                                    <strong>на выгодных условиях</strong>
+                                    по всей стране
+                                </h1>
+                                <div class="slider__flag">
+                                    <img src="img/slider/flag.png" alt="">
+                                </div>
+                            </div>
+                            <div class="slider__description">Здесь вам не придется покупать товар в слепую — проведите
+                                тест-драйв перед покупкой</div>
+                            <button type="button" class="button button__slider button__modal"><span
+                                    class="button__slider--first">Запись на т</span><span
+                                    class="t__uppercase">Т</span>ест-драйв</button>
+                        </div>
+                    </div>
+                    <div class="slider__back">
+                        <img src="img/slider/bg.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slider__slide swiper-slide">
+                    <div class="container">
+                        <div class="slider__wrap">
+                            <div class="slider__title">
+                                <h1 class="slider__header">Кресла Samurai
+                                    <strong>на выгодных условиях</strong>
+                                    по всей стране
+                                </h1>
+                                <div class="slider__flag">
+                                    <img src="img/slider/flag.png" alt="">
+                                </div>
+                            </div>
+                            <div class="slider__description">Здесь вам не придется покупать товар в слепую — проведите
+                                тест-драйв перед покупкой</div>
+                            <button type="button" class="button button__slider button__modal"><span
+                                    class="button__slider--first">Запись на т</span><span
+                                    class="t__uppercase">Т</span>ест-драйв</button>
+                        </div>
+                    </div>
+                    <div class="slider__back">
+                        <img src="img/slider/bg.jpg" alt="">
+                    </div>
+                </div>
+                <div class="slider__slide swiper-slide">
+                    <div class="container">
+                        <div class="slider__wrap">
+                            <div class="slider__title">
+                                <h1 class="slider__header">Кресла Samurai
+                                    <strong>на выгодных условиях</strong>
+                                    по всей стране
+                                </h1>
+                                <div class="slider__flag">
+                                    <img src="img/slider/flag.png" alt="">
+                                </div>
+                            </div>
+                            <div class="slider__description">Здесь вам не придется покупать товар в слепую — проведите
+                                тест-драйв перед покупкой</div>
+                            <button type="button" class="button button__slider button__modal"><span
+                                    class="button__slider--first">Запись на т</span><span
+                                    class="t__uppercase">Т</span>ест-драйв</button>
+                        </div>
+                    </div>
+                    <div class="slider__back">
+                        <img src="img/slider/bg.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="slider__navigation">
+                <div class="slider__arrow slider__arrow--left">
+                    <img loading="lazy" src="img/slider/arrow-left.svg" alt="">
+                </div>
+                <div class="slider__arrow slider__arrow--right">
+                    <img loading="lazy" src="img/slider/arrow-right.svg" alt="">
+                </div>
+            </div>
+            <div class="slider__pagination"></div>
+        </section>
+
+        <div class="pros" data-aos="fade-up">
+            <div class="container">
+                <div class="pros__wrap">
+                    <div class="pros__card">
+                        <div class="pros__img">
+                            <img loading="lazy" src="img/pros__card/trolley.svg" alt="">
+                        </div>
+                        <div class="pros__text--wrap">
+                            <div class="pros__text pros__text--color"><strong style="font-weight: 600;">Бесплатная
+                                    доставка</strong> по Москве
+                                и
+                                Санкт-Петербургу — от 3 шт.</div>
+                            <div class="pros__subtext pros__subtext--color">Как получить?</div>
+                        </div>
+                    </div>
+
+                    <div class="pros__card">
+                        <div class="pros__img">
+                            <img loading="lazy" src="img/pros__card/chess.svg" alt="">
+                        </div>
+                        <div class="pros__text--wrap">
+                            <div class="pros__text pros__text--color"><strong style="font-weight: 600;">Индивидуальные
+                                    скидки</strong> при заказе от 3 шт.</div>
+                            <div class="pros__subtext pros__subtext--color">Смотреть условия</div>
+                        </div>
+                    </div>
+
+                    <div class="pros__card">
+                        <div class="pros__img">
+                            <img loading="lazy" src="img/pros__card/discount.svg" alt="">
+                        </div>
+                        <div class="pros__text--wrap">
+                            <div class="pros__text pros__text--color">Для юридических лиц
+                                действуют <strong style="font-weight: 600;">особые условия</strong></div>
+                            <div class="pros__subtext pros__subtext--color">Узнать подробнее</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <section class="catalog" data-aos="fade-up">
+            <div class="container">
+                <h2 class="title title__document">Каталог кресел</h2>
+                <div class="catalog__wrap" data-aos="fade-right">
+                    <div class="catalog__card">
+                        <div class="card card__wrap">
+                            <div class="card__img">
+                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                            </div>
+                            <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
+                            <div class="card__price card__price--new">23 000 ₽</div>
+                            <div class="card__price card__price--old">
+                                <span>27 000 ₽</span>
+                                <img src="img/card/price-line.svg" alt="" class="card__price-img">
+                            </div>
+                            <div>
+                                <button type="submit" class="button__card button__card--color">Добавить в
+                                    корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="card card__wrap">
+                            <div class="card__img">
+                                <img src="img/card/card__img.png" alt="">
+                            </div>
+                            <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
+                            <div class="card__price card__price--new">23 000 ₽</div>
+                            <div class="card__price card__price--old">
+                                <span>27 000 ₽</span>
+                                <img loading="lazy" src="img/card/price-line.svg" alt="" class="card__price-img">
+                            </div>
+                            <div>
+                                <button type="submit" class="button__card button__card--color">Добавить в
+                                    корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="card card__wrap">
+                            <div class="card__img">
+                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                            </div>
+                            <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
+                            <div class="card__price card__price--new">23 000 ₽</div>
+                            <div class="card__price card__price--old">
+                                <span>27 000 ₽</span>
+                                <img src="img/card/price-line.svg" alt="" class="card__price-img">
+                            </div>
+                            <div>
+                                <button type="submit" class="button__card button__card--color">Добавить в
+                                    корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="card card__wrap">
+                            <div class="card__img">
+                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                            </div>
+                            <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
+                            <div class="card__price card__price--new">23 000 ₽</div>
+                            <div class="card__price card__price--old">
+                                <span>27 000 ₽</span>
+                                <img src="img/card/price-line.svg" alt="" class="card__price-img">
+                            </div>
+                            <div>
+                                <button type="submit" class="button__card button__card--color">Добавить в
+                                    корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="card card__wrap">
+                            <div class="card__img">
+                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                            </div>
+                            <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
+                            <div class="card__price card__price--new">23 000 ₽</div>
+                            <div class="card__price card__price--old">
+                                <span>27 000 ₽</span>
+                                <img src="img/card/price-line.svg" alt="" class="card__price-img">
+                            </div>
+                            <div>
+                                <button type="submit" class="button__card button__card--color">Добавить в
+                                    корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="card card__wrap">
+                            <div class="card__img">
+                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                            </div>
+                            <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
+                            <div class="card__price card__price--new">23 000 ₽</div>
+                            <div class="card__price card__price--old">
+                                <span>27 000 ₽</span>
+                                <img src="img/card/price-line.svg" alt="" class="card__price-img">
+                            </div>
+                            <div>
+                                <button type="submit" class="button__card button__card--color">Добавить в
+                                    корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="card card__wrap">
+                            <div class="card__img">
+                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                            </div>
+                            <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
+                            <div class="card__price card__price--new">23 000 ₽</div>
+                            <div class="card__price card__price--old">
+                                <span>27 000 ₽</span>
+                                <img src="img/card/price-line.svg" alt="" class="card__price-img">
+                            </div>
+                            <div>
+                                <button type="submit" class="button__card button__card--color">Добавить в
+                                    корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="card card__wrap">
+                            <div class="card__img">
+                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                            </div>
+                            <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
+                            <div class="card__price card__price--new">23 000 ₽</div>
+                            <div class="card__price card__price--old">
+                                <span>27 000 ₽</span>
+                                <img src="img/card/price-line.svg" alt="" class="card__price-img">
+                            </div>
+                            <div>
+                                <button type="submit" class="button__card button__card--color">Добавить в
+                                    корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__more catalog__more--style">
+                    <button type="button" class="catalog__button catalog__button--style">Показать все</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="percs">
+            <div class="container">
+                <div class="percs__upper">
+                    <h2 class="title title__document percs__title">Особенности кресел Самурай</h2>
+                    <div class="percs__description">Здесь будет более подробно развернуто ключевое преимущество.
+                        Четвертое поколение Samurai, выпускаемое с сентября 2020 года. <strong>Исправлены
+                            десятки недочетов</strong> предыдущих поколений</div>
+                </div>
+                <div class="percs__lower">
+                    <div class="percs__items">
+                        <div class="percs__item">
+                            <div class="percs__header">Индивидуальные настройки</div>
+                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество позиционных
+                                исследований способствует повышению</div>
+                        </div>
+                        <div class="percs__item percs__item--active">
+                            <div class="percs__header">Индивидуальные настройки</div>
+                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество позиционных
+                                исследований способствует повышению</div>
+                        </div>
+                        <div class="percs__item">
+                            <div class="percs__header">Индивидуальные настройки</div>
+                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество позиционных
+                                исследований способствует повышению</div>
+                        </div>
+                        <div class="percs__item">
+                            <div class="percs__header">Индивидуальные настройки</div>
+                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество позиционных
+                                исследований способствует повышению</div>
+                        </div>
+                        <div class="percs__item">
+                            <div class="percs__header">Индивидуальные настройки</div>
+                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество позиционных
+                                исследований способствует повышению</div>
+                        </div>
+                        <div class="percs__item">
+                            <div class="percs__header">Индивидуальные настройки</div>
+                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество позиционных
+                                исследований способствует повышению</div>
+                        </div>
+                        <div class="percs__item">
+                            <div class="percs__header">Индивидуальные настройки</div>
+                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество позиционных
+                                исследований способствует повышению</div>
+                        </div>
+                        <div class="percs__item">
+                            <div class="percs__header">Индивидуальные настройки</div>
+                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество позиционных
+                                исследований способствует повышению</div>
+                        </div>
+                    </div>
+                    <div class="percs__img">
+                        <img loading="lazy" src="img/percs/chair.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="percs__bg">
+                <img loading="lazy" src="img/percs/bg.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="testdrive" data-aos="fade-up">
+            <div class="testdrive-bg">
+                <img loading="lazy" src="img/testdrive/bg.jpg" alt="" class="testdrive-bg__desktop">
+                <img loading="lazy" src="img/testdrive/bg-mobile.jpg" alt="" class="testdrive-bg__mobile">
+            </div>
+            <div class="container">
+                <div class="testdrive__wrap">
+                    <h2 class="testdrive__header">Посетите салон и проведите тест-драйв лично</h2>
+                    <p class="testdrive__text">У нас есть шоурумы в Москве и Санкт-Петербурге, где мы всегда рады видеть
+                        вас. Дат профессиональную консультацию и поделиться экспертизой</p>
+                    <button type="button" class="button testdrive__button button__modal">Запись на
+                        тест-драйв</button>
+                </div>
+            </div>
+            <div class="testdrive__img">
+                <img loading="lazy" src="img/testdrive/human.png" alt="">
+            </div>
+        </section>
+
+        <section class="facts">
+            <div class="container">
+                <h2 class="title title__document facts__title">10 удивительных фактов про <span>МЕТТА</span></h2>
+                <div class="facts__description">Кресла Samurai - продукция компании МЕТТА, ведущего производителя
+                    офисных кресел и стульев в России и странах СНГ. Компания МЕТТА еще более удивительна, чем ее
+                    кресла:</div>
+                <div class="facts__items">
+                    <div class="facts__item">
+                        <div class="facts__question">
+                            <div class="facts__number">01</div>
+                            <div class="facts__text"><span>МЕТТА</span> заставляет расстаться с привычкой,</div>
+                            <div class="facts__open">
+                                <img loading="lazy" src="img/facts/plus.svg" class="facts__plus" alt="">
+                                <img loading="lazy" src="img/facts/minus.svg" class="facts__minus" alt="">
+                            </div>
+                        </div>
+                        <div class="facts__answer answer--active">Столько различных модификаций кресел можно
+                            скомпоновать, если
+                            перебирать все возможные сочетания комплектующих. Но в каталог МЕТТА входят около тысячи
+                            наиболее востребованных моделей. </div>
+                    </div>
+                    <div class="facts__item">
+                        <div class="facts__question">
+                            <div class="facts__number">02</div>
+                            <div class="facts__text">Миллион вариантов</div>
+                            <div class="facts__open">
+                                <img loading="lazy" src="img/facts/plus.svg" class="facts__plus" alt="">
+                                <img loading="lazy" src="img/facts/minus.svg" class="facts__minus" alt="">
+                            </div>
+                        </div>
+                        <div class="facts__answer">Столько различных модификаций кресел можно скомпоновать, если
+                            перебирать все возможные сочетания комплектующих. Но в каталог МЕТТА входят около тысячи
+                            наиболее востребованных моделей. </div>
+                    </div>
+                    <div class="facts__item">
+                        <div class="facts__question">
+                            <div class="facts__number">03</div>
+                            <div class="facts__text">Полный производственный цикл</div>
+                            <div class="facts__open">
+                                <img loading="lazy" src="img/facts/plus.svg" class="facts__plus" alt="">
+                                <img loading="lazy" src="img/facts/minus.svg" class="facts__minus" alt="">
+                            </div>
+                        </div>
+                        <div class="facts__answer">Столько различных модификаций кресел можно скомпоновать, если
+                            перебирать все возможные сочетания комплектующих. Но в каталог МЕТТА входят около тысячи
+                            наиболее востребованных моделей. </div>
+                    </div>
+                    <div class="facts__item">
+                        <div class="facts__question">
+                            <div class="facts__number">04</div>
+                            <div class="facts__text">Японские инженеры</div>
+                            <div class="facts__open">
+                                <img loading="lazy" src="img/facts/plus.svg" class="facts__plus" alt="">
+                                <img loading="lazy" src="img/facts/minus.svg" class="facts__minus" alt="">
+                            </div>
+                        </div>
+                        <div class="facts__answer">Столько различных модификаций кресел можно скомпоновать, если
+                            перебирать все возможные сочетания комплектующих. Но в каталог МЕТТА входят около тысячи
+                            наиболее востребованных моделей. </div>
+                    </div>
+                    <div class="facts__item">
+                        <div class="facts__question">
+                            <div class="facts__number">05</div>
+                            <div class="facts__text">Швейцарская Swiss Approval International</div>
+                            <div class="facts__open">
+                                <img loading="lazy" src="img/facts/plus.svg" class="facts__plus" alt="">
+                                <img loading="lazy" src="img/facts/minus.svg" class="facts__minus" alt="">
+                            </div>
+                        </div>
+                        <div class="facts__answer">Столько различных модификаций кресел можно скомпоновать, если
+                            перебирать все возможные сочетания комплектующих. Но в каталог МЕТТА входят около тысячи
+                            наиболее востребованных моделей. </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="clients" data-aos="fade-up">
+            <div class="clients__wrap">
+                <h2 class="title__document clients__title">Наши клиенты</h2>
+                <div class="clients__card--wrap">
+                    <div class="clients__card rzhd">
+                        <img loading="lazy" src="img/clients/rzhd.jpg" alt="">
+                    </div>
+                    <div class="clients__card nni">
+                        <img loading="lazy" src="img/clients/nni.jpg" alt="">
+                    </div>
+                    <div class="clients__card bn">
+                        <img loading="lazy" src="img/clients/bn.jpg" alt="">
+                    </div>
+                    <div class="clients__card rk">
+                        <img loading="lazy" src="img/clients/rk.jpg" alt="">
+                    </div>
+                    <div class="clients__card hc">
+                        <img loading="lazy" src="img/clients/hc.jpg" alt="">
+                    </div>
+                    <div class="clients__card win">
+                        <img loading="lazy" src="img/clients/win.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form form--position" data-aos="fade-up">
+            <div class="form__wrapper">
+                <div class="container">
+                    <h3 class="form__header">У вас остались вопросы?</h3>
+                    <div class="form__description">Оставьте контакты. Наш менеджер свяжется с вами и бесплатно
+                        проконсультирует</div>
+                    <form action="#" method="POST" class="form__elements">
+                        <div class="form__item">
+                            <label for="name" class="form__label">
+                                <input type="text" id="name" name="user-name" class="form__input"
+                                    placeholder="Ваше имя">
+                            </label>
+                            <label for="phone" class="form__label">
+                                <input type="tel" id="phone" name="user-phone" class="form__input"
+                                    placeholder="Телефон для связи">
+                            </label>
+                            <button type="submit" class="button button__form button__modal">Заказать звонок</button>
+                        </div>
+                        <div class="form__item">
+                            <input type="checkbox" id="form__check" class="form__checkbox">
+                            <label for="form__check" class="form__text"><span>Даю свое согласие на&nbsp;обработку личных
+                                    данных</span></label>
+                        </div>
+                    </form>
+                </div>
+                <div class="form__hand">
+                    <img loading="lazy" src="img/form/hand.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d288494.21858549764!2d37.31642936002624!3d55.60443294295146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696314a0ce7ac0b%3A0xc6d20952b624d082!2sRed%20Cadet!5e0!3m2!1sru!2sru!4v1647790971732!5m2!1sru!2sru"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer-logo">
+                    <div class="footer-logo__img">
+                        <img loading="lazy" src="img/footer/footer-logo.png" alt="">
+                    </div>
+                    <div class="footer-logo__text">Кресла Samurai</div>
+                </div>
+                <div class="footer-conf">
+                    <span class="footer-conf__upper">Политика конфиденциальности</span>
+                    <span class="footer-conf__lower">© 2021 Все права защищены</span>
+                </div>
+                <div class="footer-nav">
+                    <a href="#" class="footer-nav__item">О продукте</a>
+                    <a href="#" class="footer-nav__item">Отзывы</a>
+                    <a href="#" class="footer-nav__item">Доставка и оплата</a>
+                    <a href="#" class="footer-nav__item">Контакты</a>
+                </div>
+                <div class="footer-contacts">
+                    <div class="footer-contacts__item">
+                        <div class="footer-contacts__img">
+                            <img loading="lazy" src="img/footer/Calling.svg" alt="">
+                        </div>
+                        <a href="tel:+74952210675" class="footer-contacts__number"></a>
+                    </div>
+                    <div class="footer-contacts__item">
+                        <div class="footer-contacts__img">
+                            <img loading="lazy" src="img/footer/Message.svg" alt="">
+                        </div>
+                        <span class="footer-contacts__span footer-contacts__mail"></span>
+                    </div>
+                    <div class="footer-contacts__item">
+                        <div class="footer-contacts__img">
+                            <img loading="lazy" src="img/footer/map.svg" alt="">
+                        </div>
+                        <span class="footer-contacts__span">ул. Красного курсанта д.25, лит.в, оф. 114, бизнес-центр
+                            "RED CADET"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal modal--style">
+        <div class="modal__inner modal__inner--style">
+            <div class="modal__done">
+                <img loading="lazy" src="img/modal/done.svg" alt="">
+            </div>
+            <div class="modal__text">
+                <div class="modal__header">Ваша заявка принята</div>
+                <div class="modal__description modal__description--color">В ближайшее время наш менеджер
+                    свяжется с Вами</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

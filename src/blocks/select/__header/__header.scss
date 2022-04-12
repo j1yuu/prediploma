@@ -1,0 +1,11 @@
+.select__header {
+    @include disflex;
+
+    img {
+        width        : 1.6rem;
+        height       : .8rem;
+        flex-shrink  : 0;
+        margin-left  : 0.4rem;
+        margin-bottom: -0.5rem;
+    }
+}

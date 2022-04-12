@@ -1,0 +1,16 @@
+.pros__wrap {
+    @include disflex;
+    padding-top    : 10.2rem;
+    padding-bottom : 9.2rem;
+    justify-content: space-between;
+}
+
+@media (max-width: 48em) {
+    .pros__wrap {
+        flex-direction: column;
+        align-items   : start;
+        padding-top   : 10.07rem;
+        padding-bottom: 14.754rem;
+        width         : 100%;
+    }
+}

@@ -1,0 +1,13 @@
+.catalog {
+    .container {
+        padding-bottom: 10.8rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .catalog {
+        .container {
+            padding-bottom: 19.3rem;
+        }
+    }
+}

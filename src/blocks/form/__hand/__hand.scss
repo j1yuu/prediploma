@@ -1,0 +1,15 @@
+.form__hand {
+    position: absolute;
+    top: -22.6rem;
+    right: 18.7rem;
+    transform: rotate(0.61deg);
+    width: 76.7rem; 
+    height: 78.6rem;
+    z-index: -1;
+}
+
+@media (max-width: 48em) {
+    .form__hand {
+        display: none;
+    }
+}

@@ -1,0 +1,12 @@
+.card__title {
+    @include font(400, 2rem, 120%);
+    text-align   : center;
+    margin-bottom: 0.3rem;
+}
+
+@media (max-width: 48em) {
+    .card__title {
+        font-size: 3.29411765rem;
+        margin-bottom: 0.7059rem;
+    }
+}

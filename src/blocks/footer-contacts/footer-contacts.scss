@@ -1,0 +1,13 @@
+.footer-contacts {
+    margin-right: -5.4rem;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 48em) {
+    .footer-contacts {
+        margin-right: 0;
+        margin-top: 0;
+        width: inherit;
+        margin-bottom: 6.25vw;
+    }
+}

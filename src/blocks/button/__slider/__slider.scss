@@ -1,0 +1,29 @@
+.button__slider {
+    background   : #0074D4;
+    box-shadow   : 0 1.29632rem 1.5375rem rgba(0, 116, 212, 0.241), 0 .538427rem .638599rem rgba(0, 116, 212, 0.15), 0 .194738rem .230969rem rgba(0, 116, 212, 0.059);
+    border-radius: .8rem;
+    padding      : 2.6rem 4.95rem 2.9rem;
+    color        : #ffffff;
+    @include font(600, 1.8rem, 130%);
+}
+
+.t__uppercase {
+    display: none;
+}
+
+@media (max-width: 48em) {
+    .button__slider {
+        padding      : 2.823529411764706rem 4.117647058823529rem 3.529411764705882rem;
+        box-shadow   : 0 3.050164705882353rem 3.617647058823529rem rgba(0, 116, 212, 0.241), 0 1.266887058823529rem 1.502585882352941rem rgba(0, 116, 212, 0.15), 0 0.4644235294117647rem 0.5434564705882353rem rgba(0, 116, 212, 0.059);
+        border-radius: 1.882352941176471rem;
+        font-size    : 3.058823529411765rem;
+    }
+
+    .button__slider--first {
+        display: none;
+    }
+
+    .t__uppercase {
+        display: inline;
+    }
+}

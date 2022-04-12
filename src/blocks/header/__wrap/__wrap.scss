@@ -1,0 +1,9 @@
+@media (max-width: 48em) {
+    .header__wrap {
+        @include disflex;
+        justify-content: space-between;
+        position       : relative;
+        padding-top    : 2.4rem;
+        padding-bottom : 2.632rem;
+    }
+}

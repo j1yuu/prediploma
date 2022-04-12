@@ -1,0 +1,15 @@
+.facts__description {
+    color: #576077;
+    @include font(400, 2.3rem, 160%);
+    text-align: center;
+    margin-bottom: 5.4rem;
+
+    font-family: 'Manrope';
+}
+
+@media (max-width: 48em) {
+    .facts__description {
+        font-size: 4.375vw;
+        margin-bottom: 7.1875vw;
+    }
+}

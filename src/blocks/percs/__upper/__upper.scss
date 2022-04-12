@@ -1,0 +1,15 @@
+.percs__upper {
+    padding-bottom: 9rem;
+
+    .title {
+        margin-bottom: 1.4rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .percs__upper {
+        position: relative;
+        padding-bottom: 0;
+        z-index: 1;
+    }
+}

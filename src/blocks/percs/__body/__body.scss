@@ -1,0 +1,9 @@
+.percs__body {
+    @include font(400, 1.5rem, 160%);
+}
+
+@media (max-width: 48em) {
+    .percs__body {
+        font-size: 4.0625vw;
+    }
+}

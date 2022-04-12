@@ -1,0 +1,12 @@
+.facts__question {
+    @include disflex;
+    cursor: pointer;
+    margin-bottom: 1.3rem;
+}
+
+@media (max-width: 48em) {
+    .facts__question {
+        margin-bottom: 0;
+        height: 8.75vw;
+    }
+}

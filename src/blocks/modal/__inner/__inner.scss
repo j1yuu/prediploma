@@ -1,0 +1,16 @@
+.modal__inner {
+    position  : relative;
+    width     : 77.4rem;
+    height    : 36.8rem;
+    margin    : 0 auto;
+    text-align: center;
+    padding   : 18.2rem 4.8rem 7.6rem;
+}
+
+@media (max-width: 48em) {
+    .modal__inner {
+        width        : 70.5882353rem;
+        padding-left : 4rem;
+        padding-right: 4rem;
+    }
+}

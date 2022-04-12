@@ -1,0 +1,84 @@
+.pros__card {
+    width: 36.3rem;
+    @include disflex;
+    flex-direction: column;
+    flex-shrink   : 0;
+
+    &:first-child {
+        width: 36.3rem;
+
+        .pros__img {
+            margin-left: -2.6rem;
+        }
+
+        .pros__text--wrap {
+            margin-left: -1.1rem;
+            margin-top: 0.3rem;
+        }
+    }
+
+    &:nth-child(2) {
+        width: 29.4rem;
+
+        .pros__text--wrap {
+            margin-left: -2.7rem;
+            margin-top: 0.2rem;
+        }
+    }
+
+    &:last-child {
+        width: 33.2rem;
+        
+        .pros__img {
+            margin-left: 2rem;
+        }
+
+        .pros__text--wrap {
+            margin-left: -1.5rem;
+        }
+    }
+}
+
+@media (max-width: 48em) {
+    .pros__card {
+        flex-direction : row;
+        justify-content: start;
+
+        &:first-child {
+            width: 67.6815rem;
+            margin-top: 1rem;
+
+            .pros__text--wrap {
+                margin-left: 0rem !important;
+                padding-left: 0.5rem;
+                margin-top: 0;
+            }
+        }
+
+        &:nth-child(2) {
+            width: 57.3771rem;
+
+            .pros__text--wrap {
+                margin-left: -2rem !important;
+            padding-left: 2.5rem;
+            }
+        }
+
+        &:last-child {
+            width: 63rem;
+
+            .pros__text--wrap {
+                padding-left: 1.47rem;
+            }
+
+            .pros__img {
+                width: 12.24rem;
+                height: 12.24rem;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 4.6838rem;
+        }
+    }
+}

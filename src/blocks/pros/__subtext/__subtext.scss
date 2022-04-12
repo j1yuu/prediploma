@@ -1,0 +1,16 @@
+.pros__subtext {
+    font-family: 'Manrope', sans-serif;
+    @include font(400, 1.5rem, 150%);
+    width         : fit-content;
+    padding-bottom: 0.2rem;
+    border-bottom : .1rem dashed #E7EAEF;
+    margin        : 0 auto;
+}
+
+@media (max-width: 48em) {
+    .pros__subtext {
+        font-size   : 3.04rem;
+        margin-left : 0;
+        margin-right: auto;
+    }
+}

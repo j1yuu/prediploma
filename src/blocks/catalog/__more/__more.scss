@@ -1,0 +1,10 @@
+.catalog__more {
+    width     : 100%;
+    margin-top: .9rem;
+}
+
+@media (max-width: 48em) {
+    .catalog__more {
+        margin-top: 2.78823529rem;
+    }
+}

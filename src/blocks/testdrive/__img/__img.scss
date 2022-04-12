@@ -1,0 +1,16 @@
+.testdrive__img {
+    width   : 59.5rem;
+    height  : 57.1rem;
+    position: absolute;
+    right   : 32rem;
+    bottom  : 1.3rem;
+}
+
+@media (max-width: 48em) {
+    .testdrive__img {
+        position: static;
+        width   : 94.759375vw;
+        height  : 90.9375vw;
+        margin  : -2.471rem auto 4.7rem;
+    }
+}

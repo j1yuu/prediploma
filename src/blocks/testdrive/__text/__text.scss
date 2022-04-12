@@ -1,0 +1,14 @@
+.testdrive__text {
+    @include font (400, 1.9rem, 160%);
+    margin-bottom: 3.1rem;
+    width        : 56.7rem;
+}
+
+@media (max-width: 48em) {
+    .testdrive__text {
+        width        : 100%;
+        font-size    : 3.3rem;
+        text-align   : center;
+        margin-bottom: 5.176rem;
+    }
+}

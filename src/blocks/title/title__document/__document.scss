@@ -1,0 +1,10 @@
+.title__document {
+    @include font (900, 4.4rem, 120%);
+    text-align: center;
+}
+
+@media (max-width: 48em) {
+    .title__document {
+        font-size: 6.6rem;
+    }
+}

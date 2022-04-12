@@ -1,0 +1,11 @@
+.header__info {
+  @include disflex;
+  justify-content: space-between;
+  margin-bottom  : 1.6rem;
+}
+
+@media (max-width: 48em) {
+  .header__info {
+    margin-bottom: unset;
+  }
+}

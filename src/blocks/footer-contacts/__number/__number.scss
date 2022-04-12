@@ -1,0 +1,10 @@
+.footer-contacts__number {
+    @include font(600, 2rem, 140%);
+color: #E7EAEF;
+}
+
+@media (max-width: 48em) {
+    .footer-contacts__number {
+        @include font(400, 4.6875vw, 140%);
+    }
+}

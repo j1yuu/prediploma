@@ -1,0 +1,11 @@
+.header__list {
+    margin-bottom: 17.412rem;
+
+    li {
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: 2.8235rem;
+        }
+    }
+}

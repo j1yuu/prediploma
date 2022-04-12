@@ -1,0 +1,17 @@
+.percs {
+    position: relative;
+    .container {
+        width: 118rem;
+        padding-top: 9.4rem;
+        padding-bottom: 17.5rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .percs {
+        .container {
+            padding: 20.625vw 4.0625vw 17.5vw;
+            width: 100vw;
+        }
+    }
+}

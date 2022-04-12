@@ -1,0 +1,11 @@
+.facts__number {
+    @include font(900, 3.8rem, 140%);
+    text-align: right;
+    opacity: 0.3;
+}
+
+@media (max-width: 48em) {
+    .facts__number {
+        display: none;
+    }
+}

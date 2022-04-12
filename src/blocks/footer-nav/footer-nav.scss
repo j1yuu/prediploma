@@ -1,0 +1,13 @@
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    padding-right: 0.5rem;
+    font-family: 'Manrope';
+}
+
+@media (max-width: 48em) {
+    .footer-nav {
+        padding-right: 0;
+        margin-bottom: 3.25vw;
+    }
+}

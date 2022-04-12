@@ -1,0 +1,14 @@
+.testdrive__header {
+    @include font (900, 4.4rem, 120%);
+    margin-bottom: 1.6rem;
+    width        : 65.4rem;
+}
+
+@media (max-width: 48em) {
+    .testdrive__header {
+        text-align   : center;
+        font-size    : 6.595rem;
+        margin-bottom: 3.0588rem;
+        width        : 100%;
+    }
+}
