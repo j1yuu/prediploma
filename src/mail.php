@@ -36,7 +36,7 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
     $mail->Username   = 'o.lover4@bk.ru'; // Логин на почте
-    $mail->Password   = ''; // Пароль 
+    $mail->Password   = 'h3chSJ10JqANBtLLxwTA'; // Пароль 
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
 
@@ -44,7 +44,7 @@ try {
 
     // Получатель письма
     $mail->addAddress('ivkash96@mail.ru');
-    $mail->addAddress('himbio__eban@mail.ru');
+    $mail->addAddress('himbio_eban@mail.ru');
 
     // Отправка сообщения
     $mail->isHTML(true);

@@ -85,39 +85,100 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const form = document.querySelector('.form__elements');
 
-    var telSelector = document.getElementById('phone');
-    var imask = new InputMask('+7 (999) 999-99-99');
-    imask.mask(telSelector);
-
-    const sendForm = (data) => {
-        return fetch('mail.php', {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8'
-            }
-        }).then(res => res.json())
-    };
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const dataform = new FormData(form),
-            user = {};
-
-        dataform.forEach((val, key) => {
-            user[key] = val;
-        });
-
-        sendForm(user).then(data => {
-            console.log('Отправлено');
-        });
-    });
 });
 
+const form = document.querySelector('.form__elements');
 
+var telSelector = document.getElementById('phone');
+var imask = new InputMask('+7 (999) 999-99-99');
+imask.mask(telSelector);
+
+const validation = new JustValidate('.form__elements');
+
+validation
+    .addField('#name', [{
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Количество символов меньше 2!'
+    },
+    {
+        rule: 'maxLength',
+        value: 30,
+        errorMessage: 'Количество символов больше 30!'
+    },
+    {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите имя!'
+    }
+    ])
+    .addField('#phone', [{
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите номер телефона!'
+    },
+    {
+        rule: 'functon',
+        validator: function () {
+            const phone = telSelector.inputmask.unmaskedvalue();
+            return phone.length === 10;
+        },
+        errorMessage: 'Введите корректный номер телефона!'
+    }
+    ]).onSuccess((e) => {
+        if (document.querySelector('#form__check').checked) {
+            const sendForm = (data) => {
+                return fetch('mail.php', {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-type': 'application/json; charset=UTF-8'
+                    }
+                }).then(res => res.json())
+            };
+
+            const dataform = new FormData(form),
+                user = {};
+
+            dataform.forEach((val, key) => {
+                user[key] = val;
+            });
+
+            sendForm(user).then(data => {
+                console.log('Отправлено');
+            });
+
+            e.target.reset();
+        }
+
+    });
+
+
+// const sendForm = (data) => {
+//     return fetch('mail.php', {
+//         method: 'POST',
+//         body: JSON.stringify(data),
+//         headers: {
+//             'Content-type': 'application/json; charset=UTF-8'
+//         }
+//     }).then(res => res.json())
+// };
+
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+
+//     const dataform = new FormData(form),
+//         user = {};
+
+//     dataform.forEach((val, key) => {
+//         user[key] = val;
+//     });
+
+//     sendForm(user).then(data => {
+//         console.log('Отправлено');
+//     });
+// });
 
 phoneA = document.querySelector('.footer-contacts__number');
 footerMail = document.querySelector('.footer-contacts__mail');
