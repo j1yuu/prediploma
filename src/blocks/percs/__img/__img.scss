@@ -1,20 +1,14 @@
 .percs__img {
-    width: 49.5rem;
-    height: 75.7rem;
-    position: absolute;
-
-    left: 33.3rem;
-    top: -10.6rem;
+    width: 52.5rem;
+    height: 76.7rem;
+    position: relative;
 }
 
 @media (max-width: 48em) {
     .percs__img {
-        position: relative;
-        left: unset;
-        top: unset;
-        width: 68.896875vw;
-        height: 114.375vw;
-        margin: -10.0625vw auto 2.1875vw;
+        width: 84.896875vw;
+        height: 117.375vw;
+        margin: -8.0625vw 0 2.1875vw 4rem;
         z-index: 0;
     }
 }

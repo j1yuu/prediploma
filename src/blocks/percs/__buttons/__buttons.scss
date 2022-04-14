@@ -1,0 +1,37 @@
+.percs__buttons {
+    display: none;
+}
+
+@media (max-width: 48em) {
+    .percs__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+        height: 44.9634375vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .percs__left {
+            position: relative;
+            height: 100%;
+            width: 3.125vw;
+            background-color: #fff;
+            border-radius: 0 5vw 5vw 0;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .percs__right {
+            position: relative;
+            right: 0;
+            height: 100%;
+            width: 3.125vw;
+            background-color: #fff;
+            border-radius: 5vw 0 0 5vw;
+            z-index: 1;
+            cursor: pointer;
+        }
+    }
+}

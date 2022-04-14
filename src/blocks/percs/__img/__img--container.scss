@@ -1,0 +1,14 @@
+.percs__img--container {
+    position: absolute;
+    overflow: hidden;
+    left: 31rem;
+    top: -12.3rem;
+}
+
+@media (max-width: 48em) {
+    .percs__img--container {
+        position: relative;
+        left: unset;
+        top: unset;
+    }
+}

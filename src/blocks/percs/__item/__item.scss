@@ -11,24 +11,25 @@
 
 @media (max-width: 48em) {
     .percs__item {
-        &:not(:first-child) {
-            display: none;
+        display: none;
+
+        &:not(:nth-child(4n)) {
+            margin-bottom: 0;
         }
 
+        margin-bottom: 0;
         background-color: #FFFFFF;
         border: 0.3125vw solid #F3F4F7;
         box-shadow: 0 6.25vw 16.25vw -2.5vw rgba(0, 0, 0, 0.15);
         border-radius: 5vw;
-
-        margin-bottom: 0 !important;
         padding: 7.1875vw 2.5vw 6.5625vw 6.5625vw;
         width: 90vw;
 
-        opacity: 1;
-        height: fit-content;
+        opacity: 0;
         position: relative;
-        z-index: 1000;
-        height: 44.375vw;
+        // z-index: 10;
+        // height: 44.375vw;
+        height: auto;   
 
         &::before {
             content: '';
@@ -36,10 +37,12 @@
             box-shadow: 0 6.25vw 16.25vw -2.5vw rgba(0, 0, 0, 0.15);
             border-radius: 5vw;
             left: 4.375vw;
-            top: 6.875vw; 
-            z-index: 1;
+            top: 7.875vw; 
+            z-index: -1;
             width: 81.25vw;
             height: 40vw;
+            transition: display .5s, opacity .5s;
+            cursor: default;
         }
     }
 }

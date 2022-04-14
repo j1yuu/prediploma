@@ -121,6 +121,11 @@ samp {
   margin: 0 auto;
 }
 
+.just-validate-error-label {
+  position: absolute;
+  font-size: 1.6rem;
+}
+
 @media (max-width: 48em) {
   html {
     font-size               : 1.3333vw;
@@ -130,5 +135,12 @@ samp {
   .container {
     padding: 0 5vw;
     width  : 100%;
+  }
+
+  .just-validate-error-label {
+    position: relative;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }

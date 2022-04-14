@@ -1,9 +1,18 @@
 .percs__body {
     @include font(400, 1.5rem, 160%);
+    span {
+        display: none;
+    }
 }
 
 @media (max-width: 48em) {
     .percs__body {
         font-size: 4.0625vw;
+        line-height: 140%;
+        color: #576077;
+
+        span {
+            display: inline;
+        }
     }
 }

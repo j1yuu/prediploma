@@ -86,71 +86,106 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// const form = document.querySelector('.form__elements');
+const percsDot = document.querySelectorAll('.percs__dot'),
+    percsItem = document.querySelectorAll('.percs__item');
 
-// var telSelector = document.getElementById('phone');
-// var imask = new InputMask('+7 (999) 999-99-99');
-// imask.mask(telSelector);
+const form = document.querySelector('.form__elements');
+var telSelector = document.getElementById('phone');
 
-// const validation = new JustValidate('.form__elements');
+const validation = new JustValidate('.form__elements');
 
-// validation
-//     .addField('#name', [{
-//         rule: 'minLength',
-//         value: 2,
-//         errorMessage: 'Количество символов меньше 2!'
-//     },
-//     {
-//         rule: 'maxLength',
-//         value: 30,
-//         errorMessage: 'Количество символов больше 30!'
-//     },
-//     {
-//         rule: 'required',
-//         value: true,
-//         errorMessage: 'Введите имя!'
-//     }
-//     ])
-//     .addField('#phone', [{
-//         rule: 'required',
-//         value: true,
-//         errorMessage: 'Введите номер телефона!'
-//     },
-//     {
-//         rule: 'functon',
-//         validator: function () {
-//             const phone = telSelector.inputmask.unmaskedvalue();
-//             return phone.length === 10;
-//         },
-//         errorMessage: 'Введите корректный номер телефона!'
-//     }
-//     ]).onSuccess((e) => {
-//         if (document.querySelector('#form__check').checked) {
-//             const sendForm = (data) => {
-//                 return fetch('mail.php', {
-//                     method: 'POST',
-//                     body: JSON.stringify(data),
-//                     headers: {
-//                         'Content-type': 'application/json; charset=UTF-8'
-//                     }
-//                 }).then(res => res.json())
-//             };
+validation
+    .addField('#name', [{
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Количество символов меньше 2!'
+    },
+    {
+        rule: 'maxLength',
+        value: 30,
+        errorMessage: 'Количество символов больше 30!'
+    },
+    {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите имя!'
+    }
+    ])
+    .addField('#phone', [{
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите номер телефона!'
+    },
+    {
+        rule: 'function',
+        validator: function () {
+            const phone = telSelector.inputmask.unmaskedvalue();
+            return phone.length === 10;
+        },
+        errorMessage: 'Введите корректный номер телефона!'
+    }
+    ])
+    .addField('#form__check', [
+        {
+            rule: 'required',
+            errorMessage: 'Обязательное поле!'
+        },
+    ]).onSuccess((e) => {
+        if (document.querySelector('#form__check').checked) {
+            const sendForm = (data) => {
+                return fetch('mail.php', {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-type': 'application/json; charset=UTF-8'
+                    }
+                }).then(res => res.json())
+            };
 
-//             const dataform = new FormData(form),
-//                 user = {};
+            const dataform = new FormData(form),
+                user = {};
 
-//             dataform.forEach((val, key) => {
-//                 user[key] = val;
-//             });
+            dataform.forEach((val, key) => {
+                user[key] = val;
+            });
 
-//             sendForm(user).then(data => {
-//                 console.log('Отправлено');
-//             });
+            sendForm(user).then(data => {
+                console.log('Отправлено');
+            });
+            //
+            //
+            //
 
-//             e.target.reset();
-//         }
+            //
+            //
+            //
 
-//     });
+            e.target.reset();
+        }
+
+        const modal = document.querySelector('.modal'),
+            formModal = document.querySelector('.form__button--modal');
+
+        formModal.addEventListener('click', (fbutton) => {
+            modal.classList.add('active');
+
+            if (!body.classList.contains('noscroll')) {
+                body.classList.add('noscroll');
+            };
+        })
+
+        modal.addEventListener('click', (e) => {
+            const isModal = e.target.closest('.modal__inner');
+
+            if (!isModal) {
+                modal.classList.remove('active');
+
+                if (!headerMobile.classList.contains('active')) {
+                    body.classList.remove('noscroll');
+                };
+            };
+        });
+    });
 
 phoneA = document.querySelector('.footer-contacts__number');
 footerMail = document.querySelector('.footer-contacts__mail');
@@ -162,16 +197,31 @@ $(document).ready(function () {
     } else {
         $(phoneA).text("+7 495 221-06-75");
         $(footerMail).text("zakaz@kresla-samurai.ru");
-
-        $('.percs__item').click(function (e) {
-            $('.percs__item').removeClass('percs__item--active');
-
-            let target = $(e.target.closest('.percs__item'));
-            if (target) {
-                $(this).addClass('percs__item--active');
-            }
-        });
     };
+
+    $(percsDot).click(function (e) {
+        $(percsDot).removeClass('dot--active');
+        $(percsItem).removeClass('percs__item--active');
+
+        let target = $(e.target.closest('.percs__dot'))
+        if (target) {
+            $(this).addClass('dot--active');
+            var index = $(percsDot).index(this);
+            $(percsItem[index]).addClass('percs__item--active');
+        }
+    });
+
+    $(percsItem).click(function (e) {
+        $(percsItem).removeClass('percs__item--active');
+        $(percsDot).removeClass('dot--active');
+
+        let target = $(e.target.closest('.percs__item'));
+        if (target) {
+            $(this).addClass('percs__item--active');
+            var index = $(percsItem).index(this);
+            $(percsDot[index]).addClass('dot--active');
+        }
+    })
 
     $('.facts__item').click(function (e) {
 
@@ -199,14 +249,9 @@ $(window).resize(function () {
     } else {
         $(phoneA).text("+7 495 221-06-75");
         $(footerMail).text("zakaz@kresla-samurai.ru");
-
-        $('.percs__item').click(function (e) {
-            $('.percs__item').removeClass('percs__item--active');
-
-            let target = $(e.target.closest('.percs__item'));
-            if (target) {
-                $(this).addClass('percs__item--active');
-            }
-        });
     }
+});
+
+$(document).ready(function () {
+    $('#phone').inputmask({ "mask": "+7 (999) 999-99-99" }); //specifying options
 });

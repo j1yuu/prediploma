@@ -1,3 +1,10 @@
 .percs__item--active {
     opacity: 1;
 }
+
+@media (max-width: 48em) {
+    .percs__item--active {
+        display: block;
+        opacity: 1 !important;
+    }
+}

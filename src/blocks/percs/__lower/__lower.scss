@@ -6,5 +6,6 @@
     .percs__lower {
         display: flex;
         flex-direction: column-reverse;
+        z-index: 0;
     }
 }

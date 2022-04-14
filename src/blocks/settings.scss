@@ -15,3 +15,29 @@
         background-color: #fff;
     }
 }
+
+.dot--active {
+    .percs__dot--active {
+        display: block !important;
+    }
+
+    .percs__dot--inactive {
+        display: none !important;
+    }
+}
+
+@media (max-width: 48em) {
+    .dot--active {
+        .percs__dot--active {
+            display: block !important;
+        }
+
+        .percs__dot--inactive {
+            display: none !important;
+        }
+
+        .percs__dot--mobile--inactive {
+            display: none !important;
+        }
+    }
+}
