@@ -84,6 +84,8 @@ window.addEventListener('DOMContentLoaded', () => {
             prevEl: '.slider__arrow--left',
         }
     });
+
+
 });
 
 const percsDot = document.querySelectorAll('.percs__dot'),
@@ -155,7 +157,11 @@ validation
             //
             //
             //
+            modal.classList.add('active');
 
+            if (!body.classList.contains('noscroll')) {
+                body.classList.add('noscroll');
+            };
             //
             //
             //
@@ -163,29 +169,31 @@ validation
             e.target.reset();
         }
 
-        const modal = document.querySelector('.modal'),
-            formModal = document.querySelector('.form__button--modal');
 
-        formModal.addEventListener('click', (fbutton) => {
-            modal.classList.add('active');
-
-            if (!body.classList.contains('noscroll')) {
-                body.classList.add('noscroll');
-            };
-        })
-
-        modal.addEventListener('click', (e) => {
-            const isModal = e.target.closest('.modal__inner');
-
-            if (!isModal) {
-                modal.classList.remove('active');
-
-                if (!headerMobile.classList.contains('active')) {
-                    body.classList.remove('noscroll');
-                };
-            };
-        });
     });
+
+const modal = document.querySelector('.modal'),
+    formModal = document.querySelector('.form__button--modal');
+
+formModal.addEventListener('click', (fbutton) => {
+    modal.classList.add('active');
+
+    if (!body.classList.contains('noscroll')) {
+        body.classList.add('noscroll');
+    };
+})
+
+modal.addEventListener('click', (e) => {
+    const isModal = e.target.closest('.modal__inner');
+
+    if (!isModal) {
+        modal.classList.remove('active');
+
+        if (!headerMobile.classList.contains('active')) {
+            body.classList.remove('noscroll');
+        };
+    };
+});
 
 phoneA = document.querySelector('.footer-contacts__number');
 footerMail = document.querySelector('.footer-contacts__mail');

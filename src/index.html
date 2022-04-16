@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aos.css">
     <script defer src="script/jquery.min.js"></script>
-    <script defer src="script/inputmask.min.js"></script>
+    <!-- <script defer src="script/inputmask.min.js"></script> -->
     <script defer src="script/jquery.inputmask.js"></script>
     <script defer src="script/just-validate.min.js"></script>
     <script defer src="script/aos.js"></script>
@@ -303,7 +303,12 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                                <picture loading="lazy">
+                                    <source srcset="img/card/card__img.avif" type="img/avif">
+                                    <source srcset="img/card/card__img.webp" type="img/webp">
+                                    <source srcset="img/card/card__img.png" type="img/png">
+                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
                             <div class="card__price card__price--new">23 000 ₽</div>
@@ -320,24 +325,12 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <img src="img/card/card__img.png" alt="">
-                            </div>
-                            <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
-                            <div class="card__price card__price--new">23 000 ₽</div>
-                            <div class="card__price card__price--old">
-                                <span>27 000 ₽</span>
-                                <img loading="lazy" src="img/card/price-line.svg" alt="" class="card__price-img">
-                            </div>
-                            <div>
-                                <button type="submit" class="button__card button__card--color">Добавить в
-                                    корзину</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__card">
-                        <div class="card card__wrap">
-                            <div class="card__img">
-                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                                <picture loading="lazy">
+                                    <source srcset="img/card/card__img.avif" type="img/avif">
+                                    <source srcset="img/card/card__img.webp" type="img/webp">
+                                    <source srcset="img/card/card__img.png" type="img/png">
+                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
                             <div class="card__price card__price--new">23 000 ₽</div>
@@ -354,7 +347,12 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                                <picture loading="lazy">
+                                    <source srcset="img/card/card__img.avif" type="img/avif">
+                                    <source srcset="img/card/card__img.webp" type="img/webp">
+                                    <source srcset="img/card/card__img.png" type="img/png">
+                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
                             <div class="card__price card__price--new">23 000 ₽</div>
@@ -371,7 +369,12 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                                <picture loading="lazy">
+                                    <source srcset="img/card/card__img.avif" type="img/avif">
+                                    <source srcset="img/card/card__img.webp" type="img/webp">
+                                    <source srcset="img/card/card__img.png" type="img/png">
+                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
                             <div class="card__price card__price--new">23 000 ₽</div>
@@ -388,7 +391,12 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                                <picture loading="lazy">
+                                    <source srcset="img/card/card__img.avif" type="img/avif">
+                                    <source srcset="img/card/card__img.webp" type="img/webp">
+                                    <source srcset="img/card/card__img.png" type="img/png">
+                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
                             <div class="card__price card__price--new">23 000 ₽</div>
@@ -405,7 +413,12 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                                <picture loading="lazy">
+                                    <source srcset="img/card/card__img.avif" type="img/avif">
+                                    <source srcset="img/card/card__img.webp" type="img/webp">
+                                    <source srcset="img/card/card__img.png" type="img/png">
+                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
                             <div class="card__price card__price--new">23 000 ₽</div>
@@ -422,7 +435,34 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <img loading="lazy" src="img/card/card__img.png" alt="">
+                                <picture loading="lazy">
+                                    <source srcset="img/card/card__img.avif" type="img/avif">
+                                    <source srcset="img/card/card__img.webp" type="img/webp">
+                                    <source srcset="img/card/card__img.png" type="img/png">
+                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
+                            <div class="card__price card__price--new">23 000 ₽</div>
+                            <div class="card__price card__price--old">
+                                <span>27 000 ₽</span>
+                                <img src="img/card/price-line.svg" alt="" class="card__price-img">
+                            </div>
+                            <div>
+                                <button type="submit" class="button__card button__card--color">Добавить в
+                                    корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__card">
+                        <div class="card card__wrap">
+                            <div class="card__img">
+                                <picture loading="lazy">
+                                    <source srcset="img/card/card__img.avif" type="img/avif">
+                                    <source srcset="img/card/card__img.webp" type="img/webp">
+                                    <source srcset="img/card/card__img.png" type="img/png">
+                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
                             <div class="card__price card__price--new">23 000 ₽</div>
@@ -509,7 +549,11 @@
                     </div>
                     <div class="percs__img--container">
                         <div class="percs__img">
-                            <img loading="lazy" src="img/percs/chair.png" alt="">
+                            <picture loading="lazy">
+                                <source srcset="img/percs/chair.webp" type="image/webp">
+                                <source srcset="img/percs/chair.png" type="image/png">
+                                <img loading="lazy" src="img/percs/chair.png" alt="">
+                            </picture>
                         </div>
                         <div class="percs__dots">
                             <div class="percs__dot">
@@ -788,6 +832,7 @@
         </div>
     </div>
 
+    <!-- <script src="script/script.min.js"></script> -->
 </body>
 
 </html>
