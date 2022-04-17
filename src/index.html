@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aos.css">
     <script defer src="script/jquery.min.js"></script>
-    <!-- <script defer src="script/inputmask.min.js"></script> -->
     <script defer src="script/jquery.inputmask.js"></script>
     <script defer src="script/just-validate.min.js"></script>
     <script defer src="script/aos.js"></script>
@@ -303,7 +302,7 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <picture loading="lazy">
+                                <picture>
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
@@ -325,7 +324,7 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <picture loading="lazy">
+                                <picture>
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
@@ -347,7 +346,7 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <picture loading="lazy">
+                                <picture>
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
@@ -369,7 +368,7 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <picture loading="lazy">
+                                <picture>
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
@@ -391,7 +390,7 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <picture loading="lazy">
+                                <picture>
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
@@ -413,7 +412,7 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <picture loading="lazy">
+                                <picture>
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
@@ -435,7 +434,7 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <picture loading="lazy">
+                                <picture>
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
@@ -457,7 +456,7 @@
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
-                                <picture loading="lazy">
+                                <picture>
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
@@ -549,7 +548,7 @@
                     </div>
                     <div class="percs__img--container">
                         <div class="percs__img">
-                            <picture loading="lazy">
+                            <picture>
                                 <source srcset="img/percs/chair.webp" type="image/webp">
                                 <source srcset="img/percs/chair.png" type="image/png">
                                 <img loading="lazy" src="img/percs/chair.png" alt="">
@@ -615,8 +614,19 @@
 
         <section class="testdrive" data-aos="fade-up">
             <div class="testdrive-bg">
-                <img loading="lazy" src="img/testdrive/bg.jpg" alt="" class="testdrive-bg__desktop">
-                <img loading="lazy" src="img/testdrive/bg-mobile.jpg" alt="" class="testdrive-bg__mobile">
+                <picture>
+                    <source srcset="img/testdrive/bg.webp" type="img/webp">
+                    <source srcset="img/testdrive/bg.jpg" type="img/jpg">
+                    <img loading="lazy" src="img/testdrive/bg.jpg" alt="" class="testdrive-bg__desktop">
+                </picture>
+
+                <picture>
+                    <source srcset="img/testdrive/bg-mobile.webp" type="img/webp">
+                    <source srcset="img/testdrive/bg-mobile.jpg" type="img/jpg">
+                    <img loading="lazy" src="img/testdrive/bg-mobile.jpg" alt="" class="testdrive-bg__mobile">
+                </picture>
+
+
             </div>
             <div class="container">
                 <div class="testdrive__wrap">
@@ -628,7 +638,11 @@
                 </div>
             </div>
             <div class="testdrive__img">
-                <img loading="lazy" src="img/testdrive/human.png" alt="">
+                <picture>
+                    <source srcset="img/testdrive/human.webp" type="img/webp">
+                    <source srcset="img/testdrive/juman.png" type="img/png">
+                    <img loading="lazy" src="img/testdrive/human.png" alt="">
+                </picture>
             </div>
         </section>
 
