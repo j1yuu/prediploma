@@ -1,0 +1,10 @@
+.animation__active {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+}
+
+.animation__block {
+    opacity: 0;
+    transform: translate3d(0, 120px, 0);
+    transition: opacity .4s, transform .7s;
+}

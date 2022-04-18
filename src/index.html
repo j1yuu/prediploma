@@ -6,16 +6,1283 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <script defer src="script/jquery.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="script/jquery.inputmask.js"></script>
     <script defer src="script/just-validate.min.js"></script>
-    <script defer src="script/aos.js"></script>
-    <script defer src="script/swiper-bundle.js"></script>
+    <script defer src="script/animation.js"></script>
     <script defer src="script/script.js"></script>
     <title>ОфисДирект</title>
+    <style>
+        @font-face {
+            font-family: Inter;
+            src: url(../fonts/Inter/Inter-Black.ttf);
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: Inter;
+            src: url(../fonts/Inter/Inter-Bold.ttf);
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: Inter;
+            src: url(../fonts/Inter/Inter-ExtraBold.ttf);
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: Inter;
+            src: url(../fonts/Inter/Inter-Light.ttf);
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: Inter;
+            src: url(../fonts/Inter/Inter-Medium.ttf);
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: Inter;
+            src: url(../fonts/Inter/Inter-Regular.ttf);
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: Inter;
+            src: url(../fonts/Inter/Inter-SemiBold.ttf);
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: Manrope;
+            src: url(../fonts/Manrope/Manrope-ExtraBold.ttf);
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: Manrope;
+            src: url(../fonts/Manrope/Manrope-Medium.ttf);
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap
+        }
+
+        @font-face {
+            font-family: Manrope;
+            src: url(../fonts/Manrope/Manrope-Regular.ttf);
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap
+        }
+
+        *,
+        ::after,
+        ::before {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        :focus:not(:focus-visible) {
+            outline: 0
+        }
+
+        html {
+            font-size: .520833vw;
+            font-family: Inter, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            text-rendering: auto;
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            font-style: normal;
+            font-weight: 400;
+            text-rendering: auto;
+            margin: 0;
+            padding: 0;
+            color: #2b3350;
+            background-color: #fff
+        }
+
+        a,
+        a:hover {
+            text-decoration: none;
+            color: #2b3350
+        }
+
+        input,
+        textarea {
+            line-height: inherit;
+            margin: 0;
+            padding: 0
+        }
+
+        button,
+        input {
+            border: none;
+            outline: 0;
+            cursor: pointer
+        }
+
+        a,
+        button,
+        input,
+        textarea {
+            outline: 0;
+            cursor: pointer;
+            font: inherit
+        }
+
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus {
+            outline: 0
+        }
+
+        a:active,
+        button:active,
+        input:active,
+        textarea:active {
+            outline: 0
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font: inherit;
+            margin: 0;
+            padding: 0
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 0
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: contain;
+            object-fit: contain
+        }
+
+        button {
+            border: none;
+            color: inherit;
+            font: inherit;
+            text-align: inherit;
+            padding: 0;
+            background-color: inherit;
+            text-rendering: auto
+        }
+
+        ul {
+            padding: 0;
+            margin: 0
+        }
+
+        ul li {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        code,
+        kbd,
+        samp {
+            font-family: monospace, monospace;
+            font-size: inherit
+        }
+
+        .container {
+            width: 117.2rem;
+            margin: 0 auto
+        }
+
+        .just-validate-error-label {
+            position: absolute;
+            font-size: 1.6rem
+        }
+
+        @media (max-width:48em) {
+            html {
+                font-size: 1.3333vw;
+                -webkit-text-size-adjust: none
+            }
+
+            .container {
+                padding: 0 5vw;
+                width: 100%
+            }
+
+            .just-validate-error-label {
+                position: relative;
+                font-size: 2rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem
+            }
+        }
+
+        .active {
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important
+        }
+
+        .noscroll {
+            overflow: hidden !important;
+            height: 100% !important
+        }
+
+        .noscroll .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background-color: #fff
+        }
+
+        .dot--active .percs__dot--active {
+            display: block !important
+        }
+
+        .dot--active .percs__dot--inactive {
+            display: none !important
+        }
+
+        .overflow--breakword-auto {
+            overflow-x: hidden;
+            overflow-wrap: break-word;
+            overflow-y: auto
+        }
+
+        @media (max-width:48em) {
+            .dot--active .percs__dot--active {
+                display: block !important
+            }
+
+            .dot--active .percs__dot--inactive {
+                display: none !important
+            }
+
+            .dot--active .percs__dot--mobile--inactive {
+                display: none !important
+            }
+        }
+
+        .animation__active {
+            opacity: 1 !important;
+            -webkit-transform: translate3d(0, 0, 0) !important;
+            transform: translate3d(0, 0, 0) !important
+        }
+
+        .animation__block {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 120px, 0);
+            transform: translate3d(0, 120px, 0);
+            -webkit-transition: opacity .4s, -webkit-transform .7s;
+            transition: opacity .4s, -webkit-transform .7s;
+            -o-transition: opacity .4s, transform .7s;
+            transition: opacity .4s, transform .7s;
+            transition: opacity .4s, transform .7s, -webkit-transform .7s
+        }
+
+        .button__header {
+            outline: 0;
+            border: none;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 140%;
+            padding: 1.35rem 2.85rem 1.55rem;
+            cursor: pointer;
+            font-family: Inter, sans-serif
+        }
+
+        @media (max-width:48em) {
+            .button__header {
+                display: none
+            }
+        }
+
+        .button__header--color {
+            background-color: #f3f4f7;
+            color: #2b3350
+        }
+
+        .button__header-mobile {
+            font-weight: 500;
+            font-size: 3.76471rem;
+            line-height: 140%;
+            padding: 3.17647rem 6.70588235rem 3.6471rem;
+            font-family: Inter, sans-serif;
+            border-radius: 1.882353rem;
+            margin-bottom: 2.353rem
+        }
+
+        .button__slider {
+            background: #0074d4;
+            -webkit-box-shadow: 0 1.29632rem 1.5375rem rgba(0, 116, 212, .241), 0 .538427rem .638599rem rgba(0, 116, 212, .15), 0 .194738rem .230969rem rgba(0, 116, 212, .059);
+            box-shadow: 0 1.29632rem 1.5375rem rgba(0, 116, 212, .241), 0 .538427rem .638599rem rgba(0, 116, 212, .15), 0 .194738rem .230969rem rgba(0, 116, 212, .059);
+            border-radius: .8rem;
+            padding: 2.6rem 4.95rem 2.9rem;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 130%
+        }
+
+        .t__uppercase {
+            display: none
+        }
+
+        @media (max-width:48em) {
+            .button__slider {
+                padding: 2.8235294118rem 4.1176470588rem 3.5294117647rem;
+                -webkit-box-shadow: 0 3.0501647059rem 3.6176470588rem rgba(0, 116, 212, .241), 0 1.2668870588rem 1.5025858824rem rgba(0, 116, 212, .15), 0 .4644235294rem .5434564706rem rgba(0, 116, 212, .059);
+                box-shadow: 0 3.0501647059rem 3.6176470588rem rgba(0, 116, 212, .241), 0 1.2668870588rem 1.5025858824rem rgba(0, 116, 212, .15), 0 .4644235294rem .5434564706rem rgba(0, 116, 212, .059);
+                border-radius: 1.8823529412rem;
+                font-size: 3.0588235294rem
+            }
+
+            .button__slider--first {
+                display: none
+            }
+
+            .t__uppercase {
+                display: inline
+            }
+        }
+
+        .button__form {
+            padding: 2.6rem 7.15rem 3rem;
+            background: #0074d4;
+            -webkit-box-shadow: 0 4.3rem 5.1rem rgba(0, 116, 212, .2), 0 1.29632rem 1.5375rem rgba(0, 116, 212, .241), 0 .538427rem .638599rem rgba(0, 116, 212, .15), 0 .194738rem .230969rem rgba(0, 116, 212, .059);
+            box-shadow: 0 4.3rem 5.1rem rgba(0, 116, 212, .2), 0 1.29632rem 1.5375rem rgba(0, 116, 212, .241), 0 .538427rem .638599rem rgba(0, 116, 212, .15), 0 .194738rem .230969rem rgba(0, 116, 212, .059);
+            border-radius: .8rem;
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 140%;
+            color: #fff
+        }
+
+        @media (max-width:48em) {
+            .button__form {
+                padding: 5.78125vw 18.125vw 7.03125vw;
+                font-size: 5vw;
+                border-radius: 2.5vw;
+                margin-right: -.5rem
+            }
+        }
+
+        .button__hover {
+            -webkit-transition: background-color .4s, color .4s;
+            -o-transition: background-color .4s, color .4s;
+            transition: background-color .4s, color .4s
+        }
+
+        .button__hover--black {
+            -webkit-transition: background-color .4s, color .4s;
+            -o-transition: background-color .4s, color .4s;
+            transition: background-color .4s, color .4s
+        }
+
+        @media (min-width:48em) {
+            .button__hover:hover {
+                background-color: #b3dbfc !important;
+                color: #000 !important
+            }
+
+            .button__hover--black:hover {
+                background-color: #2b3350 !important;
+                color: #fff !important
+            }
+        }
+
+        .header {
+            padding-top: 1.8rem;
+            padding-bottom: 1.4rem
+        }
+
+        @media (max-width:48em) {
+            .header__wrap {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                position: relative;
+                padding-top: 2.4rem;
+                padding-bottom: 2.632rem
+            }
+        }
+
+        .header__burger {
+            display: none;
+            height: 5.4433rem;
+            width: 5.4433rem
+        }
+
+        @media (max-width:48em) {
+            .header__burger {
+                display: block
+            }
+        }
+
+        .header__cross {
+            width: 3.76470588rem;
+            height: 3.76470588rem;
+            display: none
+        }
+
+        .header__catalog {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-right: 4.25rem
+        }
+
+        @media (max-width:48em) {
+            .header__catalog {
+                display: none
+            }
+        }
+
+        .header__catalog--color {
+            border-radius: 0 1.2rem 1.2rem 1.2rem;
+            background: #2b3350;
+            color: #fff;
+            font-family: Inter, sans-serif
+        }
+
+        .header__catalog--size-m {
+            padding: 1.1rem 2.8rem 1.2rem 2.7rem;
+            font-weight: 600;
+            font-size: 1.7rem;
+            line-height: 140%
+        }
+
+        .select__categories {
+            cursor: pointer;
+            position: relative
+        }
+
+        .select__header {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .select__header img {
+            width: 1.6rem;
+            height: .8rem;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            margin-left: .4rem;
+            margin-bottom: -.5rem
+        }
+
+        .select__title {
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 140%
+        }
+
+        .select__body {
+            display: none;
+            position: absolute;
+            left: -3.5rem
+        }
+
+        .select__body--active {
+            margin-top: 2rem;
+            padding: 2rem;
+            display: block;
+            background-color: #fff;
+            border: .1rem solid #ededf2;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-box-shadow: 0 .5rem 1rem rgba(157, 160, 166, .15);
+            box-shadow: 0 .5rem 1rem rgba(157, 160, 166, .15);
+            border-radius: .8rem
+        }
+
+        .select__item {
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 140%
+        }
+
+        .select__item:not(:last-child) {
+            margin-bottom: 1rem
+        }
+
+        .header__find {
+            width: 51rem;
+            height: 5.1rem
+        }
+
+        @media (max-width:48em) {
+            .header__find {
+                display: none
+            }
+        }
+
+        .header__gps {
+            width: 2rem;
+            height: 2rem;
+            margin-right: .8rem
+        }
+
+        .header__info {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            margin-bottom: 1.6rem
+        }
+
+        @media (max-width:48em) {
+            .header__info {
+                margin-bottom: unset
+            }
+        }
+
+        .header__input {
+            width: 100%;
+            height: 100%;
+            padding-left: 4.5rem;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 124%
+        }
+
+        .header__input--color {
+            border-radius: .8rem;
+            color: #101426;
+            background: #f7f7f8 url(../img/header/find.svg);
+            background-repeat: no-repeat;
+            background-position: 2rem;
+            background-size: 1.8rem
+        }
+
+        .header__link {
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 140%;
+            font-family: Inter, sans-serif
+        }
+
+        .header__link:not(:last-child) {
+            margin-right: 3.4rem
+        }
+
+        .header__link:nth-child(3) {
+            margin-left: -.5rem
+        }
+
+        .header__menu {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between
+        }
+
+        .header__navigation {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        @media (max-width:48em) {
+            .header__navigation {
+                display: none
+            }
+        }
+
+        .header__region {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-right: 2.5rem
+        }
+
+        @media (max-width:48em) {
+            .header__region {
+                display: none
+            }
+        }
+
+        .header__shop {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .header__mobile {
+            content: normal;
+            position: fixed;
+            left: 0;
+            top: 13rem;
+            background-color: #fff;
+            -webkit-box-shadow: 0 .9412rem 2.82353rem rgba(0, 0, 0, .04);
+            box-shadow: 0 .9412rem 2.82353rem rgba(0, 0, 0, .04);
+            display: none;
+            padding-top: 10.12rem;
+            padding-bottom: 4.70588rem;
+            width: 100%;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            z-index: 100
+        }
+
+        .header__list {
+            margin-bottom: 17.412rem
+        }
+
+        .header__list li {
+            text-align: center
+        }
+
+        .header__list li:not(:last-child) {
+            margin-bottom: 2.8235rem
+        }
+
+        .header__item {
+            font-weight: 500;
+            font-size: 3.7647rem;
+            line-height: 140%
+        }
+
+        .header__item--color a {
+            color: #2b3350
+        }
+
+        .header-basket__count--size {
+            color: #fff;
+            padding: .2rem .6rem;
+            background: #0074d4;
+            border-radius: 2.7rem
+        }
+
+        @media (max-width:48em) {
+            .header-basket__count--size {
+                padding: 0 .9368rem;
+                position: absolute;
+                right: -5%;
+                top: -4%
+            }
+        }
+
+        .header-basket__count {
+            font-weight: 700;
+            font-size: 1.2rem;
+            line-height: 140%
+        }
+
+        @media (max-width:48em) {
+            .header-basket__count {
+                font-weight: 700;
+                font-size: 2.108rem;
+                line-height: 140%
+            }
+        }
+
+        .header-basket__img {
+            width: 2rem;
+            height: 2rem;
+            margin-right: .8rem
+        }
+
+        @media (max-width:48em) {
+            .header-basket__img {
+                width: 5.62rem;
+                height: 5.62rem
+            }
+        }
+
+        .header-basket__text {
+            margin-right: .65rem;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 140%
+        }
+
+        @media (max-width:48em) {
+            .header-basket__text {
+                display: none
+            }
+        }
+
+        .header-basket__wrap {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-negative: 0;
+            flex-shrink: 0
+        }
+
+        @media (max-width:48em) {
+            .header-basket__wrap {
+                position: relative
+            }
+        }
+
+        .header-logo__text {
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: -.5rem
+        }
+
+        .header-logo__text--color {
+            color: #959aae
+        }
+
+        .header-logo__text {
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 150%;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: .1em
+        }
+
+        @media (max-width:48em) {
+            .header-logo__text {
+                font-size: 1.88235294rem;
+                margin-top: -1.2rem;
+                padding-left: 1.3rem
+            }
+        }
+
+        .header-logo__wrap {
+            width: 18.4rem
+        }
+
+        @media (max-width:48em) {
+            .header-logo__wrap {
+                position: absolute;
+                top: 52%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                width: 31.15rem
+            }
+        }
+
+        .header-tel__img {
+            width: 3.4rem;
+            height: 3.4rem
+        }
+
+        .header-tel__text {
+            font-weight: 500;
+            font-size: 1.9rem;
+            line-height: 140%;
+            color: #2b3350
+        }
+
+        @media (max-width:48em) {
+            .header-tel__text {
+                color: #0074d4;
+                font-size: 3.29411765rem;
+                text-decoration: underline
+            }
+        }
+
+        .header-tel__wrap {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-left: -2rem
+        }
+
+        @media (max-width:48em) {
+            .header-tel {
+                display: none
+            }
+        }
+
+        .menu__img {
+            width: 2.4rem;
+            height: 2.4rem;
+            margin-right: 1.2rem
+        }
+
+        .title {
+            padding-bottom: 3.5rem
+        }
+
+        .title__document {
+            font-weight: 900;
+            font-size: 4.4rem;
+            line-height: 120%;
+            text-align: center
+        }
+
+        @media (max-width:48em) {
+            .title__document {
+                font-size: 6.6rem
+            }
+        }
+
+        .title__document--color {
+            color: #fff
+        }
+
+        @media (max-width:48em) {
+            .slider {
+                padding-bottom: 4rem
+            }
+        }
+
+        .slider__slide {
+            height: 64rem;
+            padding-top: 11.6rem;
+            padding-bottom: 13.1rem
+        }
+
+        @media (max-width:48em) {
+            .slider__slide {
+                height: 40.4706rem;
+                padding: 5.411765rem 0 7.5294117rem 3.76470588rem;
+                background-color: #f5f5f5
+            }
+
+            .slider__slide .container {
+                padding: 0 .5rem
+            }
+
+            .swiper-slide-active .slider__back {
+                left: 3rem !important
+            }
+        }
+
+        .slider__navigation {
+            position: absolute;
+            width: 180.8rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            z-index: 100
+        }
+
+        @media (max-width:48em) {
+            .slider__navigation {
+                display: none
+            }
+        }
+
+        .slider__pagination {
+            z-index: 100;
+            position: absolute;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            bottom: 3rem !important
+        }
+
+        .slider__pagination .swiper-pagination-bullet-active {
+            background-color: #2b3350
+        }
+
+        @media (max-width:48em) {
+            .slider__pagination {
+                bottom: 0 !important
+            }
+
+            .slider__pagination .swiper-pagination-bullet {
+                width: .9412rem;
+                height: .9412rem
+            }
+        }
+
+        .slider__arrow {
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            background: #fff;
+            -webkit-box-shadow: 0 1.2rem 2rem -.8rem rgba(68, 88, 104, .25);
+            box-shadow: 0 1.2rem 2rem -.8rem rgba(68, 88, 104, .25);
+            cursor: pointer
+        }
+
+        .slider__wrap {
+            max-width: 64rem
+        }
+
+        @media (max-width:48em) {
+            .slider__wrap {
+                max-width: 49.6470588235rem
+            }
+        }
+
+        .slider__title {
+            position: relative
+        }
+
+        .slider__header {
+            font-weight: 900;
+            font-size: 5.4rem;
+            line-height: 120%;
+            letter-spacing: -.03em;
+            margin-bottom: 2.1rem;
+            margin-top: .5rem;
+            height: 19.5rem
+        }
+
+        .slider__header strong {
+            font-weight: 900;
+            display: block
+        }
+
+        @media (max-width:48em) {
+            .slider__header {
+                font-size: 4rem;
+                font-weight: 400;
+                margin-bottom: 2.8235294118rem;
+                letter-spacing: 0;
+                height: 19.15vw
+            }
+        }
+
+        .slider__flag {
+            width: 5.4rem;
+            height: 6.5rem;
+            position: absolute;
+            bottom: -.3rem;
+            right: 18.5rem
+        }
+
+        @media (max-width:48em) {
+            .slider__flag {
+                width: 4.2353rem;
+                height: 5.1765rem;
+                right: 14.5rem
+            }
+        }
+
+        .slider__description {
+            font-weight: 400;
+            font-size: 2.1rem;
+            line-height: 160%;
+            margin-bottom: 3.2rem;
+            height: 6.8rem
+        }
+
+        @media (max-width:48em) {
+            .slider__description {
+                display: none
+            }
+        }
+
+        .slider__back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 64rem
+        }
+
+        @media (max-width:48em) {
+            .slider__back {
+                height: 40.4706rem
+            }
+
+            .slider__back img {
+                -o-object-fit: cover;
+                object-fit: cover
+            }
+        }
+
+        .pros .container {
+            max-width: 114rem
+        }
+
+        @media (max-width:48em) {
+            .pros .container {
+                max-width: 100%;
+                padding: 0 3.4rem
+            }
+        }
+
+        .pros__wrap {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding-top: 10.2rem;
+            padding-bottom: 9.2rem;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between
+        }
+
+        @media (max-width:48em) {
+            .pros__wrap {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: start;
+                padding-top: 10.07rem;
+                padding-bottom: 14.754rem;
+                width: 100%
+            }
+        }
+
+        .pros__card {
+            width: 36.3rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-negative: 0;
+            flex-shrink: 0
+        }
+
+        .pros__card:first-child {
+            width: 36.3rem
+        }
+
+        .pros__card:first-child .pros__img {
+            margin-left: -2.6rem
+        }
+
+        .pros__card:first-child .pros__text--wrap {
+            margin-left: -1.1rem;
+            margin-top: .3rem
+        }
+
+        .pros__card:nth-child(2) {
+            width: 29.4rem
+        }
+
+        .pros__card:nth-child(2) .pros__text--wrap {
+            margin-left: -2.7rem;
+            margin-top: .2rem
+        }
+
+        .pros__card:last-child {
+            width: 33.2rem
+        }
+
+        .pros__card:last-child .pros__img {
+            margin-left: 2rem
+        }
+
+        .pros__card:last-child .pros__text--wrap {
+            margin-left: -1.5rem
+        }
+
+        @media (max-width:48em) {
+            .pros__card {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                justify-content: start
+            }
+
+            .pros__card:first-child {
+                width: 67.6815rem;
+                margin-top: 1rem
+            }
+
+            .pros__card:first-child .pros__text--wrap {
+                margin-left: 0 !important;
+                padding-left: .5rem;
+                margin-top: 0
+            }
+
+            .pros__card:nth-child(2) {
+                width: 57.3771rem
+            }
+
+            .pros__card:nth-child(2) .pros__text--wrap {
+                margin-left: -2rem !important;
+                padding-left: 2.5rem
+            }
+
+            .pros__card:last-child {
+                width: 63rem
+            }
+
+            .pros__card:last-child .pros__text--wrap {
+                padding-left: 1.47rem
+            }
+
+            .pros__card:last-child .pros__img {
+                width: 12.24rem;
+                height: 12.24rem
+            }
+
+            .pros__card:not(:last-child) {
+                margin-bottom: 4.6838rem
+            }
+        }
+
+        .pros__img {
+            width: 8.8rem;
+            height: 8.8rem;
+            margin-bottom: 1.8rem
+        }
+
+        @media (max-width:48em) {
+            .pros__img {
+                width: 11.24rem;
+                height: 11.24rem;
+                margin-bottom: auto;
+                margin-right: 1.8rem;
+                margin-left: 0 !important;
+                margin-top: 0 !important
+            }
+        }
+
+        @media (max-width:48em) {
+            .pros__text--wrap {
+                max-width: 80.62%
+            }
+        }
+
+        .pros__text {
+            font-weight: 300;
+            font-size: 2.2rem;
+            line-height: 150%;
+            margin-bottom: 1.3rem;
+            text-align: center;
+            height: 6.6rem;
+            width: 100%
+        }
+
+        @media (max-width:48em) {
+            .pros__text {
+                font-size: 3.28rem;
+                text-align: left;
+                margin-bottom: 1.171rem;
+                height: 13.125vw
+            }
+        }
+
+        .pros__subtext {
+            font-family: Manrope, sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            line-height: 150%;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            padding-bottom: .2rem;
+            border-bottom: .1rem dashed #e7eaef;
+            margin: 0 auto
+        }
+
+        @media (max-width:48em) {
+            .pros__subtext {
+                font-size: 3.04rem;
+                margin-left: 0;
+                margin-right: auto
+            }
+        }
+
+        .pros__subtext--color {
+            color: #959aae
+        }
+    </style>
 </head>
 
 <body>
@@ -30,7 +1297,7 @@
                     <div class="header__cross">
                         <img loading="lazy" src="img/header/cross.svg" alt="">
                     </div>
-                    <a href="#" class="header-logo header-logo__wrap">
+                    <a href="https://www.othlebnul.ru" class="header-logo header-logo__wrap">
                         <div class="header-logo__img">
                             <img loading="lazy" src="img/header/logo.svg" alt="">
                         </div>
@@ -48,14 +1315,15 @@
                         </div>
                         <a href="tel:+74952210675" class="header-tel__text">+7 495 221-06-75</a>
                     </div>
-                    <button type="button" class="button button__header button__header--color button__modal">
+                    <button type="button"
+                        class="button button__hover--black button__header button__header--color button__modal">
                         Заказать звонок
                     </button>
                 </div>
 
                 <div class="header__menu">
                     <div class="header__navigation">
-                        <button class="header__catalog header__catalog--color header__catalog--size-m">
+                        <button class="header__catalog button__hover header__catalog--color header__catalog--size-m">
                             <img loading="lazy" src="img/header/burger.svg" alt="" class="menu__img">
                             <span>Каталог</span>
                         </button>
@@ -114,7 +1382,8 @@
                         <a href="#">Контакты</a>
                     </li>
                 </ul>
-                <button type="button" class="button button__header-mobile button__header--color button__modal">
+                <button type="button"
+                    class="button button__hover button__header-mobile button__header--color button__modal">
                     Заказать звонок
                 </button>
                 <a href="tel:+74952210675" class="header-tel__text">+7 495 221-06-75</a>
@@ -130,7 +1399,7 @@
                     <div class="container">
                         <div class="slider__wrap">
                             <div class="slider__title">
-                                <h1 class="slider__header">Кресла Samurai
+                                <h1 class="slider__header overflow--breakword-auto">Кресла Samurai
                                     <strong>на выгодных условиях</strong>
                                     по всей стране
                                 </h1>
@@ -138,9 +1407,10 @@
                                     <img src="img/slider/flag.png" alt="">
                                 </div>
                             </div>
-                            <div class="slider__description">Здесь вам не придется покупать товар в слепую — проведите
+                            <div class="slider__description overflow--breakword-auto">Здесь вам не придется покупать
+                                товар в слепую — проведите
                                 тест-драйв перед покупкой</div>
-                            <button type="button" class="button button__slider button__modal"><span
+                            <button type="button" class="button button__hover button__slider button__modal"><span
                                     class="button__slider--first">Запись на т</span><span
                                     class="t__uppercase">Т</span>ест-драйв</button>
                         </div>
@@ -153,7 +1423,7 @@
                     <div class="container">
                         <div class="slider__wrap">
                             <div class="slider__title">
-                                <h1 class="slider__header">Кресла Samurai
+                                <h1 class="slider__header overflow--breakword-auto">Кресла Samurai
                                     <strong>на выгодных условиях</strong>
                                     по всей стране
                                 </h1>
@@ -161,9 +1431,10 @@
                                     <img src="img/slider/flag.png" alt="">
                                 </div>
                             </div>
-                            <div class="slider__description">Здесь вам не придется покупать товар в слепую — проведите
+                            <div class="slider__description overflow--breakword-auto">Здесь вам не придется покупать
+                                товар в слепую — проведите
                                 тест-драйв перед покупкой</div>
-                            <button type="button" class="button button__slider button__modal"><span
+                            <button type="button" class="button button__hover button__slider button__modal"><span
                                     class="button__slider--first">Запись на т</span><span
                                     class="t__uppercase">Т</span>ест-драйв</button>
                         </div>
@@ -176,7 +1447,7 @@
                     <div class="container">
                         <div class="slider__wrap">
                             <div class="slider__title">
-                                <h1 class="slider__header">Кресла Samurai
+                                <h1 class="slider__header overflow--breakword-auto">Кресла Samurai
                                     <strong>на выгодных условиях</strong>
                                     по всей стране
                                 </h1>
@@ -184,9 +1455,10 @@
                                     <img src="img/slider/flag.png" alt="">
                                 </div>
                             </div>
-                            <div class="slider__description">Здесь вам не придется покупать товар в слепую — проведите
+                            <div class="slider__description overflow--breakword-auto">Здесь вам не придется покупать
+                                товар в слепую — проведите
                                 тест-драйв перед покупкой</div>
-                            <button type="button" class="button button__slider button__modal"><span
+                            <button type="button" class="button button__hover button__slider button__modal"><span
                                     class="button__slider--first">Запись на т</span><span
                                     class="t__uppercase">Т</span>ест-драйв</button>
                         </div>
@@ -199,7 +1471,7 @@
                     <div class="container">
                         <div class="slider__wrap">
                             <div class="slider__title">
-                                <h1 class="slider__header">Кресла Samurai
+                                <h1 class="slider__header overflow--breakword-auto">Кресла Samurai
                                     <strong>на выгодных условиях</strong>
                                     по всей стране
                                 </h1>
@@ -207,9 +1479,10 @@
                                     <img src="img/slider/flag.png" alt="">
                                 </div>
                             </div>
-                            <div class="slider__description">Здесь вам не придется покупать товар в слепую — проведите
+                            <div class="slider__description overflow--breakword-auto">Здесь вам не придется покупать
+                                товар в слепую — проведите
                                 тест-драйв перед покупкой</div>
-                            <button type="button" class="button button__slider button__modal"><span
+                            <button type="button" class="button button__hover button__slider button__modal"><span
                                     class="button__slider--first">Запись на т</span><span
                                     class="t__uppercase">Т</span>ест-драйв</button>
                         </div>
@@ -222,7 +1495,7 @@
                     <div class="container">
                         <div class="slider__wrap">
                             <div class="slider__title">
-                                <h1 class="slider__header">Кресла Samurai
+                                <h1 class="slider__header overflow--breakword-auto">Кресла Samurai
                                     <strong>на выгодных условиях</strong>
                                     по всей стране
                                 </h1>
@@ -230,9 +1503,10 @@
                                     <img src="img/slider/flag.png" alt="">
                                 </div>
                             </div>
-                            <div class="slider__description">Здесь вам не придется покупать товар в слепую — проведите
+                            <div class="slider__description overflow--breakword-auto">Здесь вам не придется покупать
+                                товар в слепую — проведите
                                 тест-драйв перед покупкой</div>
-                            <button type="button" class="button button__slider button__modal"><span
+                            <button type="button" class="button button__hover button__slider button__modal"><span
                                     class="button__slider--first">Запись на т</span><span
                                     class="t__uppercase">Т</span>ест-драйв</button>
                         </div>
@@ -253,7 +1527,7 @@
             <div class="slider__pagination"></div>
         </section>
 
-        <div class="pros" data-aos="fade-up">
+        <div class="pros">
             <div class="container">
                 <div class="pros__wrap">
                     <div class="pros__card">
@@ -261,7 +1535,8 @@
                             <img loading="lazy" src="img/pros__card/trolley.svg" alt="">
                         </div>
                         <div class="pros__text--wrap">
-                            <div class="pros__text pros__text--color"><strong style="font-weight: 600;">Бесплатная
+                            <div class="pros__text pros__text--color overflow--breakword-auto"><strong
+                                    style="font-weight: 600;">Бесплатная
                                     доставка</strong> по Москве
                                 и
                                 Санкт-Петербургу — от 3 шт.</div>
@@ -274,7 +1549,8 @@
                             <img loading="lazy" src="img/pros__card/chess.svg" alt="">
                         </div>
                         <div class="pros__text--wrap">
-                            <div class="pros__text pros__text--color"><strong style="font-weight: 600;">Индивидуальные
+                            <div class="pros__text pros__text--color overflow--breakword-auto"><strong
+                                    style="font-weight: 600;">Индивидуальные
                                     скидки</strong> при заказе от 3 шт.</div>
                             <div class="pros__subtext pros__subtext--color">Смотреть условия</div>
                         </div>
@@ -285,7 +1561,7 @@
                             <img loading="lazy" src="img/pros__card/discount.svg" alt="">
                         </div>
                         <div class="pros__text--wrap">
-                            <div class="pros__text pros__text--color">Для юридических лиц
+                            <div class="pros__text pros__text--color overflow--breakword-auto">Для юридических лиц
                                 действуют <strong style="font-weight: 600;">особые условия</strong></div>
                             <div class="pros__subtext pros__subtext--color">Узнать подробнее</div>
                         </div>
@@ -295,10 +1571,10 @@
             </div>
         </div>
 
-        <section class="catalog" data-aos="fade-up">
+        <section class="catalog animation__block">
             <div class="container">
                 <h2 class="title title__document">Каталог кресел</h2>
-                <div class="catalog__wrap" data-aos="fade-right">
+                <div class="catalog__wrap">
                     <div class="catalog__card">
                         <div class="card card__wrap">
                             <div class="card__img">
@@ -306,7 +1582,7 @@
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
-                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                    <img loading="lazy" src="img/card/card__img.webp" alt="">
                                 </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
@@ -316,7 +1592,7 @@
                                 <img src="img/card/price-line.svg" alt="" class="card__price-img">
                             </div>
                             <div>
-                                <button type="submit" class="button__card button__card--color">Добавить в
+                                <button type="submit" class="button__card button__hover button__card--color">Добавить в
                                     корзину</button>
                             </div>
                         </div>
@@ -328,7 +1604,7 @@
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
-                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                    <img loading="lazy" src="img/card/card__img.webp" alt="">
                                 </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
@@ -338,7 +1614,7 @@
                                 <img src="img/card/price-line.svg" alt="" class="card__price-img">
                             </div>
                             <div>
-                                <button type="submit" class="button__card button__card--color">Добавить в
+                                <button type="submit" class="button__card button__hover button__card--color">Добавить в
                                     корзину</button>
                             </div>
                         </div>
@@ -350,7 +1626,7 @@
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
-                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                    <img loading="lazy" src="img/card/card__img.webp" alt="">
                                 </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
@@ -360,7 +1636,7 @@
                                 <img src="img/card/price-line.svg" alt="" class="card__price-img">
                             </div>
                             <div>
-                                <button type="submit" class="button__card button__card--color">Добавить в
+                                <button type="submit" class="button__card button__hover button__card--color">Добавить в
                                     корзину</button>
                             </div>
                         </div>
@@ -372,7 +1648,7 @@
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
-                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                    <img loading="lazy" src="img/card/card__img.webp" alt="">
                                 </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
@@ -382,7 +1658,7 @@
                                 <img src="img/card/price-line.svg" alt="" class="card__price-img">
                             </div>
                             <div>
-                                <button type="submit" class="button__card button__card--color">Добавить в
+                                <button type="submit" class="button__card button__hover button__card--color">Добавить в
                                     корзину</button>
                             </div>
                         </div>
@@ -394,7 +1670,7 @@
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
-                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                    <img loading="lazy" src="img/card/card__img.webp" alt="">
                                 </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
@@ -404,7 +1680,7 @@
                                 <img src="img/card/price-line.svg" alt="" class="card__price-img">
                             </div>
                             <div>
-                                <button type="submit" class="button__card button__card--color">Добавить в
+                                <button type="submit" class="button__card button__hover button__card--color">Добавить в
                                     корзину</button>
                             </div>
                         </div>
@@ -416,7 +1692,7 @@
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
-                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                    <img loading="lazy" src="img/card/card__img.webp" alt="">
                                 </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
@@ -426,7 +1702,7 @@
                                 <img src="img/card/price-line.svg" alt="" class="card__price-img">
                             </div>
                             <div>
-                                <button type="submit" class="button__card button__card--color">Добавить в
+                                <button type="submit" class="button__card button__hover button__card--color">Добавить в
                                     корзину</button>
                             </div>
                         </div>
@@ -438,7 +1714,7 @@
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
-                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                    <img loading="lazy" src="img/card/card__img.webp" alt="">
                                 </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
@@ -448,7 +1724,7 @@
                                 <img src="img/card/price-line.svg" alt="" class="card__price-img">
                             </div>
                             <div>
-                                <button type="submit" class="button__card button__card--color">Добавить в
+                                <button type="submit" class="button__card button__hover button__card--color">Добавить в
                                     корзину</button>
                             </div>
                         </div>
@@ -460,7 +1736,7 @@
                                     <source srcset="img/card/card__img.avif" type="img/avif">
                                     <source srcset="img/card/card__img.webp" type="img/webp">
                                     <source srcset="img/card/card__img.png" type="img/png">
-                                    <img loading="lazy" src="img/card/card__img.png" alt="">
+                                    <img loading="lazy" src="img/card/card__img.webp" alt="">
                                 </picture>
                             </div>
                             <div class="card__title card__title--color">Samurai KL-1.04 Темно-коричневый</div>
@@ -470,14 +1746,15 @@
                                 <img src="img/card/price-line.svg" alt="" class="card__price-img">
                             </div>
                             <div>
-                                <button type="submit" class="button__card button__card--color">Добавить в
+                                <button type="submit" class="button__card button__hover button__card--color">Добавить в
                                     корзину</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="catalog__more catalog__more--style">
-                    <button type="button" class="catalog__button catalog__button--style">Показать все</button>
+                    <button type="button" class="catalog__button button__hover catalog__button--style">Показать
+                        все</button>
                 </div>
             </div>
         </section>
@@ -486,7 +1763,8 @@
             <div class="container">
                 <div class="percs__upper">
                     <h2 class="title title__document percs__title">Особенности кресел Самурай</h2>
-                    <div class="percs__description">Здесь будет более подробно развернуто ключевое преимущество.
+                    <div class="percs__description overflow--breakword-auto">Здесь будет более подробно развернуто
+                        ключевое преимущество.
                         Четвертое поколение Samurai, выпускаемое с сентября 2020 года. <strong>Исправлены
                             десятки недочетов</strong> предыдущих поколений</div>
                 </div>
@@ -499,49 +1777,57 @@
 
                         <div class="percs__item">
                             <div class="percs__header">Индивидуальные настройки</div>
-                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество
+                            <div class="percs__body overflow--breakword-auto">Учитывая ключевые сценарии поведения,
+                                высокое качество
                                 позици<span>- </span>онных
                                 исследований способствует повышению</div>
                         </div>
                         <div class="percs__item percs__item--active">
                             <div class="percs__header">Индивидуальные настройки</div>
-                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество
+                            <div class="percs__body overflow--breakword-auto">Учитывая ключевые сценарии поведения,
+                                высокое качество
                                 позици<span>- </span>онных
                                 исследований способствует повышению</div>
                         </div>
                         <div class="percs__item">
                             <div class="percs__header">Индивидуальные настройки</div>
-                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество
+                            <div class="percs__body overflow--breakword-auto">Учитывая ключевые сценарии поведения,
+                                высокое качество
                                 позици<span>- </span>онных
                                 исследований способствует повышению</div>
                         </div>
                         <div class="percs__item">
                             <div class="percs__header">Индивидуальные настройки</div>
-                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество
+                            <div class="percs__body overflow--breakword-auto">Учитывая ключевые сценарии поведения,
+                                высокое качество
                                 позици<span>- </span>онных
                                 исследований способствует повышению</div>
                         </div>
                         <div class="percs__item">
                             <div class="percs__header">Индивидуальные настройки</div>
-                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество
+                            <div class="percs__body overflow--breakword-auto">Учитывая ключевые сценарии поведения,
+                                высокое качество
                                 позици<span>- </span>онных
                                 исследований способствует повышению</div>
                         </div>
                         <div class="percs__item">
                             <div class="percs__header">Индивидуальные настройки</div>
-                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество
+                            <div class="percs__body overflow--breakword-auto">Учитывая ключевые сценарии поведения,
+                                высокое качество
                                 позици<span>- </span>онных
                                 исследований способствует повышению</div>
                         </div>
                         <div class="percs__item">
                             <div class="percs__header">Индивидуальные настройки</div>
-                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество
+                            <div class="percs__body overflow--breakword-auto">Учитывая ключевые сценарии поведения,
+                                высокое качество
                                 позици<span>- </span>онных
                                 исследований способствует повышению</div>
                         </div>
                         <div class="percs__item">
                             <div class="percs__header">Индивидуальные настройки</div>
-                            <div class="percs__body">Учитывая ключевые сценарии поведения, высокое качество
+                            <div class="percs__body overflow--breakword-auto">Учитывая ключевые сценарии поведения,
+                                высокое качество
                                 позици<span>- </span>онных
                                 исследований способствует повышению</div>
                         </div>
@@ -551,7 +1837,7 @@
                             <picture>
                                 <source srcset="img/percs/chair.webp" type="image/webp">
                                 <source srcset="img/percs/chair.png" type="image/png">
-                                <img loading="lazy" src="img/percs/chair.png" alt="">
+                                <img loading="lazy" src="img/percs/chair.webp" alt="">
                             </picture>
                         </div>
                         <div class="percs__dots">
@@ -612,18 +1898,18 @@
             </div>
         </section>
 
-        <section class="testdrive" data-aos="fade-up">
+        <section class="testdrive animation__block">
             <div class="testdrive-bg">
                 <picture>
                     <source srcset="img/testdrive/bg.webp" type="img/webp">
                     <source srcset="img/testdrive/bg.jpg" type="img/jpg">
-                    <img loading="lazy" src="img/testdrive/bg.jpg" alt="" class="testdrive-bg__desktop">
+                    <img loading="lazy" src="img/testdrive/bg.webp" alt="" class="testdrive-bg__desktop">
                 </picture>
 
                 <picture>
                     <source srcset="img/testdrive/bg-mobile.webp" type="img/webp">
                     <source srcset="img/testdrive/bg-mobile.jpg" type="img/jpg">
-                    <img loading="lazy" src="img/testdrive/bg-mobile.jpg" alt="" class="testdrive-bg__mobile">
+                    <img loading="lazy" src="img/testdrive/bg-mobile.webp" alt="" class="testdrive-bg__mobile">
                 </picture>
 
 
@@ -633,7 +1919,7 @@
                     <h2 class="testdrive__header">Посетите салон и проведите тест-драйв лично</h2>
                     <p class="testdrive__text">У нас есть шоурумы в Москве и Санкт-Петербурге, где мы всегда рады видеть
                         вас. Дат профессиональную консультацию и поделиться экспертизой</p>
-                    <button type="button" class="button testdrive__button button__modal">Запись на
+                    <button type="button" class="button testdrive__button button__hover button__modal">Запись на
                         тест-драйв</button>
                 </div>
             </div>
@@ -641,7 +1927,7 @@
                 <picture>
                     <source srcset="img/testdrive/human.webp" type="img/webp">
                     <source srcset="img/testdrive/juman.png" type="img/png">
-                    <img loading="lazy" src="img/testdrive/human.png" alt="">
+                    <img loading="lazy" src="img/testdrive/human.webp" alt="">
                 </picture>
             </div>
         </section>
@@ -649,7 +1935,8 @@
         <section class="facts">
             <div class="container">
                 <h2 class="title title__document facts__title">10 удивительных фактов про <span>МЕТТА</span></h2>
-                <div class="facts__description">Кресла Samurai - продукция компании МЕТТА, ведущего производителя
+                <div class="facts__description overflow--breakword-auto">Кресла Samurai - продукция компании МЕТТА,
+                    ведущего производителя
                     офисных кресел и стульев в России и странах СНГ. Компания МЕТТА еще более удивительна, чем ее
                     кресла:</div>
                 <div class="facts__items">
@@ -723,7 +2010,7 @@
             </div>
         </section>
 
-        <section class="clients" data-aos="fade-up">
+        <section class="clients">
             <div class="clients__wrap">
                 <h2 class="title__document clients__title">Наши клиенты</h2>
                 <div class="clients__card--wrap">
@@ -749,11 +2036,12 @@
             </div>
         </section>
 
-        <section class="form form--position" data-aos="fade-up">
+        <section class="form form--position animation__block">
             <div class="form__wrapper">
                 <div class="container">
                     <h3 class="form__header">У вас остались вопросы?</h3>
-                    <div class="form__description">Оставьте контакты. Наш менеджер свяжется с вами и бесплатно
+                    <div class="form__description overflow--breakword-auto">Оставьте контакты. Наш менеджер свяжется с
+                        вами и бесплатно
                         проконсультирует</div>
                     <form action="#" method="POST" class="form__elements">
                         <div class="form__item">
@@ -765,7 +2053,8 @@
                                 <input type="tel" id="phone" name="user-phone" class="form__input"
                                     placeholder="Телефон для связи">
                             </label>
-                            <button type="submit" class="button button__form  form__button--modal">Заказать
+                            <button type="submit"
+                                class="button button__hover button__form  form__button--modal">Заказать
                                 звонок</button>
                         </div>
                         <div class="form__item">
@@ -792,12 +2081,12 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__wrapper">
-                <div class="footer-logo">
+                <a href="https://www.othlebnul.ru" class="footer-logo">
                     <div class="footer-logo__img">
                         <img loading="lazy" src="img/footer/footer-logo.png" alt="">
                     </div>
                     <div class="footer-logo__text">Кресла Samurai</div>
-                </div>
+                </a>
                 <div class="footer-conf">
                     <span class="footer-conf__upper">Политика конфиденциальности</span>
                     <span class="footer-conf__lower">© 2021 Все права защищены</span>
@@ -845,8 +2134,6 @@
             </div>
         </div>
     </div>
-
-    <!-- <script src="script/script.min.js"></script> -->
 </body>
 
 </html>

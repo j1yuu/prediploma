@@ -2,6 +2,7 @@
     text-align: center;
     @include font(400, 2.3rem, 160%);
     color: #576077;
+    height: 7.4rem;
     
     strong {
         font-weight: 600;
@@ -11,5 +12,6 @@
 @media (max-width: 48em) {
     .percs__description {
         font-size: 4.375vw;
+        height: 42.375vw;
     }
 }

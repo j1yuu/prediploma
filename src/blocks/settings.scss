@@ -26,6 +26,12 @@
     }
 }
 
+.overflow--breakword-auto {
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+}
+
 @media (max-width: 48em) {
     .dot--active {
         .percs__dot--active {

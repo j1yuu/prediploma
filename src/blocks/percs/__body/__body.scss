@@ -3,6 +3,7 @@
     span {
         display: none;
     }
+    height: 7.2rem;
 }
 
 @media (max-width: 48em) {
@@ -10,6 +11,7 @@
         font-size: 4.0625vw;
         line-height: 140%;
         color: #576077;
+        height: 22.8vw;
 
         span {
             display: inline;

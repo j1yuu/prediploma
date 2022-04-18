@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', () => {
-    AOS.init();
 
     const selectHeader = document.querySelector('.select__header');
     const selectBody = document.querySelector('.select__body');

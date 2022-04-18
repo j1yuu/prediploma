@@ -2,6 +2,8 @@
     @include font(300, 2.2rem, 150%);
     margin-bottom: 1.3rem;
     text-align   : center;
+    height: 6.6rem;
+    width: 100%;
 }
 
 @media (max-width: 48em) {
@@ -9,5 +11,6 @@
         font-size    : 3.28rem;
         text-align   : left;
         margin-bottom: 1.171rem;
+        height: 13.125vw;
     }
 }

@@ -1,0 +1,22 @@
+.button__hover {
+    transition: background-color .4s, color .4s;
+}
+
+.button__hover--black {
+    transition: background-color .4s, color .4s;
+}
+
+@media (min-width: 48em) {
+    
+    .button__hover:hover {
+        background-color: #B3DBFC !important;
+        color: black !important; 
+    }
+
+
+    .button__hover--black:hover {
+        background-color: #2B3350 !important;
+        color: #ffffff !important;
+    }
+}
+
